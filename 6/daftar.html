@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORC-VI | Pendaftaran</title>
+    <link rel="icon" type="image/x-icon" href="assets/rihand/logo-plain.ico">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/rihand/form.css">
+    <link rel="stylesheet" href="assets/rihand/daftar.css">
+</head>
+<body>
+<main class="m-5">
+
+    <div class="text-center p-3 mb-3">
+        <img src="assets/rihand/logo-text.png" class="" width="200vw" alt="">
+    </div>
+    
+    
+    <div class="col-md-8 offset-md-2">
+        <div class="card p-3">
+            <div class="card-body">
+                
+                <form id="formRegistrasi" method="POST" autocomplete="off">
+                <input type="hidden" name="Batch" value="I" readonly>
+                <input type="hidden" name="Username" id="Username" readonly>
+                    
+                    <h1 class="text-center">ORC-VI</h1>
+                    <h5 class="text-center">Pendaftaran</h5>
+                    <div class="text-center">
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                    </div><br>
+                
+                    <div class="tab">
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                            <input type="text" placeholder="Nama Lengkap" name="NamaLengkap" id="NamaLengkap">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="bi bi-bank"></i></span>
+                            <input type="text" placeholder="Nama Sekolah" name="Sekolah" id="Sekolah">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-whatsapp"></i></span>
+                            <input type="number" placeholder="Nomor WA" name="NomorWA" id="NomorWA">
+                        </div>
+                        <p class="form-text mb-3">*) Isi dengan angka saja, awali dengan 0 (contoh: 08123456789)</p>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="bi bi-pin-map"></i></span>
+                            <!-- <input type="text" placeholder="Provinsi" name="Provinsi" id="Provinsi" list="ProvinsiDatalist"> -->
+                            <select id="Provinsi" name="Provinsi">
+                                <option value="" selected hidden>Provinsi</option>
+                                <option value="Aceh">Aceh</option>
+                                <option value="Sumatera Utara">Sumatera Utara</option>
+                                <option value="Sumatera Barat">Sumatera Barat</option>
+                                <option value="Riau">Riau</option>
+                                <option value="Jambi">Jambi</option>
+                                <option value="Sumatera Selatan">Sumatera Selatan</option>
+                                <option value="Bengkulu">Bengkulu</option>
+                                <option value="Lampung">Lampung</option>
+                                <option value="Bangka Belitung">Bangka Belitung</option>
+                                <option value="Kepulauan Riau">Kepulauan Riau</option>
+                                <option value="Jakarta">Jakarta</option>
+                                <option value="Jawa Barat">Jawa Barat</option>
+                                <option value="Banten">Banten</option>
+                                <option value="Jawa Tengah">Jawa Tengah</option>
+                                <option value="Yogyakarta">Yogyakarta</option>
+                                <option value="Jawa Timur">Jawa Timur</option>
+                                <option value="Kalimantan Barat">Kalimantan Barat</option>
+                                <option value="Kalimantan Tengah">Kalimantan Tengah</option>
+                                <option value="Kalimantan Selatan">Kalimantan Selatan</option>
+                                <option value="Kalimantan Timur">Kalimantan Timur</option>
+                                <option value="Kalimantan Utara">Kalimantan Utara</option>
+                                <option value="Bali">Bali</option>
+                                <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+                                <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+                                <option value="Sulawesi Utara">Sulawesi Utara</option>
+                                <option value="Sulawesi Tengah">Sulawesi Tengah</option>
+                                <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+                                <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+                                <option value="Sulawesi Barat">Sulawesi Barat</option>
+                                <option value="Gorontalo">Gorontalo</option>
+                                <option value="Maluku">Maluku</option>
+                                <option value="Maluku Utara">Maluku Utara</option>
+                                <option value="Papua">Papua</option>
+                                <option value="Papua Barat">Papua Barat</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="tab">
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="bi bi-capslock-fill"></i></span>
+                            <select name="Jenjang" id="Jenjang">
+                                <option value="" selected hidden>Jenjang</option>
+                                <option value="SD">SD</option>
+                                <option value="SMP">SMP</option>
+                                <option value="SMA">SMA</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="bi bi-check2-square"></i></span>
+                            <select name="Kelas" id="Kelas">
+                                <option value="" selected hidden>Kelas</option>
+                                <optgroup label="Sekolah Dasar">
+                                    <option value="SD 4">SD Kelas 4</option>
+                                    <option value="SD 5">SD Kelas 5</option>
+                                    <option value="SD 6">SD Kelas 6</option>
+                                </optgroup>
+                                <optgroup label="Sekolah Menengah Pertama">
+                                    <option value="SMP 1">SMP Kelas 1</option>
+                                    <option value="SMP 2">SMP Kelas 2</option>
+                                    <option value="SMP 3">SMP Kelas 3</option>
+                                </optgroup>
+                                <optgroup label="Sekolah Menengah Atas">
+                                    <option value="SMA 1">SMA Kelas 1</option>
+                                    <option value="SMA 2">SMA Kelas 2</option>
+                                    <option value="SMA 3">SMA Kelas 3</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="bi bi-box-arrow-in-right"></i></span>
+                            <select name="Bidang" id="Bidang">
+                                <option value="" selected hidden>Bidang</option>
+                                <optgroup id="bidangSD" class="d-none" label="Sekolah Dasar">
+                                    <option value="SD BING">SD Bahasa Inggris</option>
+                                    <option value="SD MTK">SD Matematika</option>
+                                    <option value="SD IPA">SD IPA</option>
+                                </optgroup>
+                                <optgroup id="bidangSMP" class="d-none" label="Sekolah Menengah Pertama">
+                                    <option value="SMP BING">SMP Bahasa Inggris</option>
+                                    <option value="SMP MTK">SMP Matematika</option>
+                                    <option value="SMP IPA">SMP IPA</option>
+                                    <option value="SMP IPS">SMP IPS</option>
+                                </optgroup>
+                                <optgroup id="bidangSMA" class="d-none" label="Sekolah Menengah Atas">
+                                    <option value="SMA BING">SMA Bahasa Inggris</option>
+                                    <option value="SMA MTK">SMA Matematika</option>
+                                    <option value="SMA Biologi">SMA Biologi</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <p class="form-text">*) Jika mengikuti lebih dari satu bidang, silahkan mengisi form ini kembali sesuai jumlah bidang yang diikuti.</p class="form-text">
+
+                    </div>
+
+                    <div class="tab">
+
+                        Biaya Pendaftaran:
+                        <h3>Rp30.000<span style="font-size: small;"> / bidang</span></h3>
+                        <div>
+                            Metode Pembayaran:
+                            <ul>
+                                <li>
+                                    <b>Bank Transfer</b>
+                                    <ul>
+                                        <li>Mandiri: 1440022220229</li>
+                                        <li>BCA: 0113100424</li>
+                                        <li>(a/n Rihand Kreatif Indonesia)</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <b>QR Code</b><br> (jika ingin membayar via e-wallet seperti GoPay, OVO, Dana, dll. atau e-banking)<br>
+                                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#qris">Lihat QR Code</button>
+                                </li>
+                            </ul>
+                        </div><hr>
+
+                        <div class="modal fade" id="qris" tabindex="-1" aria-labelledby="qrisLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="qrisLabel">QR CODE</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="assets/rihand/qrcode.jpeg" width="100%" class="rounded">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="bi bi-box-arrow-in-up-right"></i></span>
+                            <input type="text" placeholder="Bank/Aplikasi Transfer Dari" name="TransferDari" id="TransferDari">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="bi bi-box-arrow-up-right"></i></span>
+                            <select name="TransferKe" id="TransferKe">
+                                <option value="" selected hidden>Pembayaran Menuju</option>
+                                <option value="QRIS">Kode QR</option>
+                                <option value="BCA">Transfer BCA</option>
+                                <option value="Mandiri">Transfer Mandiri</option>
+                                <option value="Voucher">Voucher</option>
+                            </select>
+                        </div>
+
+                        <div class="upload_button_holder">
+                            <input type="file" id="fileElem" accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+                            <a href="#" id="fileSelect" class="btn btn-success col-12 mb-2 p-2 rounded-pill"><i class="bi bi-upload"></i> Pilih Bukti Pembayaran</a>
+                        </div>
+                        <small>*) Silahkan tunggu bukti pembayaran untuk tampil di bawah ini sebelum klik tombol Lanjut. Jika gambar tidak muncul, silahkan periksa koneksi internet dan upload ulang.</small><br><br>
+                        <input type="hidden" id="BuktiPembayaran" name="BuktiPembayaran">
+                        <div id="buktiPembayaranGambar"></div><br>
+            
+                    </div>
+                    
+                    <div class="tab">
+                        
+                        <div class="alert alert-info mb-3" role="alert">
+                            <h4 class="alert-heading"><i class="bi bi-exclamation-triangle"></i> Data Tidak Boleh Salah!</h4>
+                            <ul>
+                                <li>Mohon periksa kembali data yang telah dimasukkan karena akan digunakan di sertifikat dan medali. Data yang sudah dimasukkan tidak dapat diperbaiki setelah dikirimkan.</li>
+                                <li>Klik tombol "Lanjut" untuk mengirimkan data atau klik tombol "Kembali" jika ingin memperbaiki data.</li>
+                            </ul>
+                        </div>
+                        <table class="table table-striped" width="100%">
+                            <tr>
+                                <th scope="row">Nama Lengkap</th>
+                                <td>: <span id="cekNama"></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Nama Sekolah</th>
+                                <td>: <span id="cekSekolah"></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Provinsi</th>
+                                <td>: <span id="cekProvinsi"></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Kelas</th>
+                                <td>: <span id="cekKelas"></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Bidang</th>
+                                <td>: <span id="cekBidang"></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" valign="top">Pembayaran</th>
+                                <td>: <span id="cekTransferDari"></span> &rarr; <span id="cekTransferKe"></span> <img id="cekPembayaran"></td>
+                            </tr>
+                        </table>
+                        
+                    </div>
+
+                    <div class="tab">
+
+                        <button type="submit" id="submitBtn" class="btn btn-success p-2 col-12 rounded-pill"><i class="bi bi-check-circle-fill"></i> Kirim</button>
+                        <button type="button" id="loadBtn" class="btn btn-success p-2 col-12 rounded-pill d-none" disabled><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...</button>
+                        
+                        <div id="tabSuccess" class="d-none">
+                            
+                            <div class="alert alert-success text-center" role="alert">
+                                <h4 class="alert-heading"><i class="bi bi-check-circle-fill"></i> Data Terkirim</h4>
+                                <p>Terima kasih telah mendaftarkan diri untuk mengikuti ORC-VI 2022!</p><hr>
+                                <a href="https://rihand.link/orc6-group1" target="_blank" class="btn btn-success mb-1"><i class="bi bi-whatsapp"></i> Join Group WhatsApp (WAJIB)</a>
+                                <a href="./info" target="_blank" class="btn btn-primary"><i class="bi bi-book"></i> Baca Panduan Pelaksanaan</a><br>
+                            </div>
+
+                        </div>
+                    
+                    </div>
+                    
+                    <div style="overflow:auto;">
+                        <div style="float:right;">
+                            <button type="button" class="btn btn-secondary" id="prevBtn" onclick="nextPrev(-1);">Kembali &larr;</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextPrev(1); cekData();">Lanjut &rarr;</button>
+                        </div>
+                    </div>
+
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<br><br><br>
+
+<footer class="footer mt-auto py-3 fixed-bottom">
+    <div class="text-center">Rihand Creative &copy; 2022</div>
+    <svg viewBox="0 -20 700 110" width="100%" height="110" preserveAspectRatio="none">
+        <path transform="translate(0, -20)" d="M0,10 c80,-22 240,0 350,18 c90,17 260,7.5 350,-20 v50 h-700" fill="#ffd796" />
+        <path d="M0,10 c80,-18 230,-12 350,7 c80,13 260,17 350,-5 v100 h-700z" fill="#ffd796" />
+    </svg>
+</footer>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/rihand/form.js"></script>
+<script src="assets/rihand/daftar.js"></script>
+
+</body>
+</html>
