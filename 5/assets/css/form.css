@@ -1,0 +1,147 @@
+/*body {
+  background: #477bad;
+  font-family: 'Poppins', sans-serif;
+}
+
+*/
+#regForm {
+  /*background-color: rgba(255, 255, 255, 0.5);*/
+  margin: 0px auto;
+  font-family: 'Poppins', sans-serif;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+#register {
+  color: #4272a1;
+}
+
+h1 {
+  text-align: center
+}
+
+select {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #aaaaaa;
+  border-radius: 10px;
+}
+
+input:not([type=checkbox]):not([type=radio]) {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #aaaaaa;
+  border-radius: 10px;
+  -webkit-appearance: none
+}
+
+.tab input:not([type=checkbox]):not([type=radio]):focus {
+  border: 1px solid #253f5a !important;
+  outline: none
+}
+
+input:not([type=checkbox]):not([type=radio]).invalid {
+  border: 1px solid #9a1a27
+}
+
+input:read-only {
+  background-color: #f5f5f5 !important;
+}
+
+textarea {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #aaaaaa;
+  border-radius: 10px;
+  -webkit-appearance: none
+}
+
+.tab textarea:focus {
+  border: 1px solid #253f5a !important;
+  outline: none
+}
+
+textarea.invalid {
+  border: 1px solid #9a1a27
+}
+
+textarea:read-only {
+  background-color: #f5f5f5 !important;
+}
+
+.tab {
+  display: none
+}
+
+button {
+  background-color: #4272a1;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer
+}
+
+button:hover {
+  opacity: 0.8
+}
+
+button:focus {
+  outline: none !important
+}
+
+#prevBtn {
+  background-color: #bbbbbb
+}
+
+.all-steps {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center
+}
+
+.step {
+  height: 40px;
+  width: 40px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  color: #253f5a;
+  opacity: 0.5
+}
+
+.step.active {
+  opacity: 1
+}
+
+.step.finish {
+  color: #fff;
+  background: #253f5a;
+  opacity: 1
+}
+
+.all-steps {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px
+}
+
+.thanks-message {
+  display: none
+}

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="id" translate="no">
+<head>
+  <!-- METAs -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Pendaftaran ORC-V &mdash; Rihand Creative</title>
+  <link rel="shortcut icon" type="image/jpg" href="assets/img/logo.ico"/>
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/rihanddaftar.css">
+  <link rel="stylesheet" href="assets/css/form.css">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');</style>
+
+  <!-- FONTAWESOME -->
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/brands.css">
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/solid.css">
+  <script defer src="assets/plugins/fontawesome/js/all.js"></script>
+  <script defer src="assets/plugins/fontawesome/js/brands.js"></script>
+  <script defer src="assets/plugins/fontawesome/js/solid.js"></script>
+  <script defer src="assets/plugins/fontawesome/js/fontawesome.js"></script>
+
+</head>
+<body>
+
+<div class="container mt-5">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-lg-8">
+      <form id="regForm" name="pendaftaran">
+
+        <h1 id="register">Form Pemesanan Reward ORC-V</h1>
+        <div class="all-steps" id="all-steps">
+          <span class="step"><i class="fas fa-user"></i></span>
+          <span class="step"><i class="fas fa-shipping-fast"></i></span>
+          <span class="step"><i class="fas fa-money-bill-wave"></i></span>
+          <span class="step"><i class="fas fa-vote-yea"></i></span>
+        </div>
+
+        <div class="tab">
+
+          <!--         	<div id="cp_widget_free" data-resi="anteraja" data-domestik="anteraja" data-mancanegara=""></div><script src="https://www.cekpengiriman.com/widget/cp_widget.js"></script> -->
+
+          <!--         	<div id="frozenshop-widget"></div>
+          <script type="text/javascript">function resizeIframe(obj) {
+              obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+            }
+          function frozenshop_widget() { 
+              document.getElementById("frozenshop-widget").innerHTML = '<iframe src="http://frozenshop.com/ceks/index.php" width="104%" height="610px" style="border:0px;" border="0" frameborder="0" scrolling="yes" onload="resizeIframe(this)"></iframe>';
+          }
+          frozenshop_widget();
+          </script> -->
+
+
+          <h6>User ID</h6>
+          <p><input class="input" type="text" name="UserID" id="userID" onchange="fetchDataUser();"></p>
+          <small>*) Jika mengikuti lebih dari satu bidang, silahkan mengisi form ini kembali sesuai jumlah bidang yang diikuti.</small>
+          <div id="alert-userid" class="alert alert-danger d-none">Data tidak ditemukan. Mohon periksa kembali User ID yang dimasukkan!</div>
+          <br><br>
+
+          <h6>Nama</h6>
+          <p><input class="input" type="text" name="Nama" id="nama" onchange="inputUppercase(this)" readonly></p><br>
+
+          <h6>Sekolah</h6>
+          <p><input class="input" type="text" name="Sekolah" id="sekolah" onchange="inputUppercase(this)" readonly></p><br>
+
+          <div class="row">
+          	<div class="col-5">
+		          <h6>Bidang</h6>
+		          <p><input class="input" type="text" name="Bidang" id="bidang" onchange="inputUppercase(this)" readonly></p><br>
+          	</div>
+          	<div class="col-3">
+		          <h6>Peringkat</h6>
+		          <p><input class="input" type="text" name="Peringkat" id="peringkat" readonly></p><br>
+          	</div>
+            <div class="col-4">
+              <h6>Medali</h6>
+              <p><input class="input" type="text" name="Medali" id="medali" readonly></p><br>
+            </div>
+          </div>
+
+          <p><input class="input" type="checkbox" id="konfirmData"><label for="konfirmData">&nbsp;Data di atas sudah benar.</label></p><br>
+          
+        </div>
+
+        <div class="tab">
+
+          <h6>Nomor WhatsApp Aktif</h6>
+          <div class="row">
+            <p class="col-3"><input class="input" type="text" name="Kode" id="kode" value="+62" placeholder="+62" class="text-right"></p>
+            <p class="col-9"><input class="input" type="number" name="WA" id="wa" oninput="inputNumber(this)" placeholder="8155518102"></p>
+          </div><br>
+
+          <div class="row">
+            <div class="col-9">
+              <h6>Alamat Pengiriman</h6>
+              <p><textarea class="textarea" name="AlamatInput" id="alamatInput" cols="30" rows="5" placeholder="Nomor dan Nama Jalan, Petunjuk Alamat"></textarea></p>
+            </div>
+            <div class="col-3">
+              <h6>Kode Pos</h6>
+              <p><input class="number" type="text" name="KodePos" id="kodepos" onchange="inputNumber(this)"></p><br>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-3">
+              <h6>RT</h6>
+              <p><input class="number" type="text" name="RT" id="rt" onchange="inputNumber(this)"></p><br>
+            </div>
+            <div class="col-3">
+              <h6>RW</h6>
+              <p><input class="number" type="text" name="RW" id="rw" onchange="inputNumber(this)"></p><br>
+            </div>
+            <div class="col-6">
+              <h6>Kelurahan</h6>
+              <p><input class="input" type="text" name="Kelurahan" id="kelurahan" onchange="inputTitle(this)"></p><br>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">
+              <h6>Kecamatan</h6>
+              <p><input class="input" type="text" name="Kecamatan" id="kecamatan" onchange="inputTitle(this)"></p><br>
+            </div>
+            <div class="col-6">
+              <h6>Kota/Kabupaten</h6>
+              <p><input class="input" type="text" name="Kota" id="kota" onchange="inputTitle(this)"></p><br>
+            </div>
+          </div>
+
+          <h6>Provinsi</h6>
+          <p><select class="input select" name="Provinsi" id="provinsi" style="width: 100%;">
+              <option value="" selected hidden></option>
+              <option data-harga="50000" value="Aceh">Aceh</option>
+              <option data-harga="50000" value="Sumatera Utara">Sumatera Utara</option>
+              <option data-harga="45000" value="Sumatera Barat">Sumatera Barat</option>
+              <option data-harga="50000" value="Riau">Riau</option>
+              <option data-harga="50000" value="Jambi">Jambi</option>
+              <option data-harga="45000" value="Sumatera Selatan">Sumatera Selatan</option>
+              <option data-harga="55000" value="Bengkulu">Bengkulu</option>
+              <option data-harga="50000" value="Lampung">Lampung</option>
+              <option data-harga="50000" value="Bangka Belitung">Bangka Belitung</option>
+              <option data-harga="45000" value="Kepulauan Riau">Kepulauan Riau</option>
+              <option data-harga="20000" value="Jakarta">Jakarta</option>
+              <option data-harga="20000" value="Jawa Barat">Jawa Barat</option>
+              <option data-harga="20000" value="Banten">Banten</option>
+              <option data-harga="20000" value="Jawa Tengah">Jawa Tengah</option>
+              <option data-harga="20000" value="Yogyakarta">Yogyakarta</option>
+              <option data-harga="20000" value="Jawa Timur">Jawa Timur</option>
+              <option data-harga="50000" value="Kalimantan Barat">Kalimantan Barat</option>
+              <option data-harga="45000" value="Kalimantan Tengah">Kalimantan Tengah</option>
+              <option data-harga="40000" value="Kalimantan Selatan">Kalimantan Selatan</option>
+              <option data-harga="50000" value="Kalimantan Timur">Kalimantan Timur</option>
+              <option data-harga="75000" value="Kalimantan Utara">Kalimantan Utara</option>
+              <option data-harga="20000" value="Bali">Bali</option>
+              <option data-harga="70000" value="NTT">Nusa Tenggara Timur</option>
+              <option data-harga="30000" value="NTB">Nusa Tenggara Barat</option>
+              <option data-harga="75000" value="Sulawesi Utara">Sulawesi Utara</option>
+              <option data-harga="60000" value="Sulawesi Tengah">Sulawesi Tengah</option>
+              <option data-harga="45000" value="Sulawesi Selatan">Sulawesi Selatan</option>
+              <option data-harga="70000" value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+              <option data-harga="55000" value="Sulawesi Barat">Sulawesi Barat</option>
+              <option data-harga="75000" value="Gorontalo">Gorontalo</option>
+              <option data-harga="75000" value="Maluku">Maluku</option>
+              <option data-harga="75000" value="Maluku Utara">Maluku Utara</option>
+              <option data-harga="140000" value="Papua">Papua</option>
+              <option data-harga="140000" value="Papua Barat">Papua Barat</option>
+          </select></p><br>
+
+          <textarea name="Alamat" id="alamat" cols="30" rows="10" style="display: none;"></textarea>
+
+        </div>
+
+        <div class="tab">
+
+          <div class="row">
+            <h6>Jumlah yang ingin Dipesan</h6>
+            <div class="col-4"><p><input class="input" type="number" name="Pesanan" id="pesanan" onchange="inputNumber(this)" min="1"></p><br></div>
+            <div class="col-8">paket (medali + sertifikat + merchandise)</div>
+          </div>
+          
+          <div>
+            Biaya Pemesanan: (termasuk ongkir)
+            <h3>Rp<span id="total">0</span></h3>
+            <input type="hidden" name="Total" id="totalInput">
+          </div>
+
+          <div>
+            Metode Pembayaran:
+            <ul>
+              <li>
+                <b>Bank Transfer</b>
+                <ul>
+                  <li>Mandiri: 1440022220229</li>
+                  <li>BCA: 0113100424</li>
+                  <li>(a/n Rihand Kreatif Indonesia)</li>
+                </ul>
+              </li>
+              <li>
+                <b>QR Code</b><br> (jika ingin membayar via e-wallet seperti GoPay, OVO, Dana, dll. atau e-banking)<br>
+                <button type="button" class="btn btn-rihand mt-2" data-bs-toggle="modal" data-bs-target="#qris">Lihat QR Code</button>
+              </li>
+            </ul>
+          </div><br><hr>
+
+          <h6>Pembayaran dari:</h6>
+          <p><input type="text" name="TransferDari" id="transferDari" oninput="inputUppercase(this)"></p><br>
+
+          <h6>Pembayaran menuju:</h6>
+          <p><select class="input" name="TransferKe" id="transferKe">
+            <option selected hidden disabled></option>
+            <option value="QRIS">Kode QR</option>
+            <option value="BCA">Transfer BCA</option>
+            <option value="MANDIRI">Transfer Mandiri</option>
+          </select></p><br>
+
+          <h6>Bukti Pembayaran</h6>
+          <div class="upload_button_holder">
+            <input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+            <a href="#" id="fileSelect" class="btn btn-success col-12 mb-2 p-2 rounded-pill"><i class="fas fa-upload"></i> Pilih Bukti Pembayaran</a>
+          </div>
+          <small>*) Silahkan tunggu bukti pembayaran untuk tampil di bawah ini sebelum klik tombol Selanjutnya. Jika gambar tidak muncul, silahkan periksa koneksi internet dan upload ulang.</small><br><br>
+          <input type="hidden" id="BuktiPembayaran" name="BuktiPembayaran">
+          <div id="buktiPembayaranGambar"></div><br>
+
+        </div>
+
+        <div class="tab">
+          <h3>Periksa Data Terlebih Dahulu</h3><br>
+          <table>
+            <tr>
+              <td width="25%">Nama Lengkap</td>
+              <td>: <span id="reviewnama"></span></td>
+            </tr>
+            <tr>
+              <td>Sekolah</td>
+              <td>: <span id="reviewsekolah"></span></td>
+            </tr>
+            <tr>
+              <td>Bidang</td>
+              <td>: <span id="reviewbidang"></span></td>
+            </tr>
+            <tr>
+              <td>Peringkat</td>
+              <td>: <span id="reviewperingkat"></span></td>
+            </tr>
+            <tr>
+              <td>Nomor WhatsApp</td>
+              <td>: <span id="reviewwa"></span></td>
+            </tr>
+            <tr>
+              <td>Alamat</td>
+              <td>: <span id="reviewalamat"></span></td>
+            </tr>
+            <tr>
+              <td>Pesanan</td>
+              <td>: <span id="reviewpesanan"></span> paket</td>
+            </tr>
+            <tr>
+              <td>Pembayaran</td>
+              <td>: (Rp<span id="reviewtotal"></span>) <span id="reviewtransferDari"></span> &nbsp;<i class="fas fa-arrow-right"></i>&nbsp; <span id="reviewtransferKe"></span></td>
+            </tr>
+            <tr>
+              <td valign="top">Bukti Pembayaran</td>
+              <td valign="top">: <img id="reviewbukti" src="" class="buktiPembayaranGambar" alt=" Gambar tidak ditemukan! Mohon upload ulang."></td>
+            </tr>
+          </table>
+          <br><br>
+          Apakah data sudah benar? Silahkan centang kotak di bawah ini dan klik <i class="fas fa-angle-double-right"></i>.<br>
+          <input type="checkbox" id="reviewSudah"> <label for="reviewSudah">Ya, saya sudah memeriksa data saya.</label>
+
+        </div>
+
+        <div class="thanks-message text-center" id="text-message">
+
+          <div class="alert alert-success alert-daftar d-none" role="alert">
+            <img src="assets/img/check.png" width="100" class="mb-4">
+            <b><h4 class="alert-heading">Data Terkirim!</h4></b>
+            <p>Terima kasih telah mendaftarkan dirimu untuk mengikuti event ORC-V! Tunggu konfirmasi WA ke nomor yang telah kamu daftarkan max. 3 hari setelah pendaftaran.</p>
+            <p class="mb-0">Panduan Pelaksanaan: <a href="https://s.id/orc5-info" target="_blank">Klik di Sini</a></p>
+            <p class="mb-0">Ingin mengisi form kembali: <a href="./preorder">Klik di Sini</a></p>
+          </div>
+
+          <span class="alert-petunjuk">Silahkan klik tombol di bawah ini untuk mengirimkan data Anda.</span>
+          <button type="button" class="btn btn-success rounded-pill col-12 d-none btn-loading m-2" disabled><span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> Loading...</button>
+          <button type="submit" class="btn btn-success rounded-pill col-12 btn-kirim m-2 p-2"><i class="fas fa-paper-plane"></i> Kirim Data</button>
+
+        </div>
+
+        <div style="overflow:auto;" id="nextprevious">
+          <div style="float:right;">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1);"><i class="fas fa-angle-double-left"></i></button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1); reviewData();" class="d-none"><i class="fas fa-angle-double-right"></i></button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <br><center><span class="text-white">Rihand Creative &copy; 2021</span></center>
+
+</div>
+
+<div class="modal fade" id="qris" tabindex="-1" aria-labelledby="qrisLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="qrisLabel">QR CODE</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="assets/img/qrcode.jpeg" width="100%" class="rounded">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+  const scriptURL     = 'https://script.google.com/macros/s/AKfycbykBQkRxbs9y-H-imswijQ6hyy1ohED0DTCEo6SJ_UbGSGI3JTEE--c-Wfc2Febq41H/exec'
+  const form          = document.forms['pendaftaran'];
+  const btnKirim      = document.querySelector('.btn-kirim');
+  const btnLoading    = document.querySelector('.btn-loading');
+  const alertDaftar   = document.querySelector('.alert-daftar');
+  const alertPetunjuk = document.querySelector('.alert-petunjuk');
+
+  form.addEventListener('submit', e => {
+
+    e.preventDefault();
+
+    btnLoading.classList.toggle('d-none');
+    btnKirim.classList.toggle('d-none');
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        alertDaftar.classList.toggle('d-none');
+        form.reset();
+
+        btnKirim.classList.toggle('d-none');
+        alertPetunjuk.classList.toggle('d-none');
+        console.log('Success!', response);
+      })
+      .catch(error => console.error('Error!', error.message))
+
+  });
+
+
+</script>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/form.js"></script>
+<script src="assets/js/rihandpreorder.js"></script>
+
+<!-- SELECT2 -->
+<link href="assets/plugins/select2/select2.min.css" rel="stylesheet" />
+<script src="assets/plugins/select2/select2.min.js"></script>
+<script>$(document).ready(function() { $('.select').select2({  }); });</script>
+
+</body>
+</html>

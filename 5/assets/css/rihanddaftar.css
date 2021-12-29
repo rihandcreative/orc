@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+body {
+  background-color: #fffcf7;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1.h1 {
+  font-family: 'Architects Daughter' !important;
+  font-weight: bolder;
+  font-size: 40pt;
+}
+
+.container {
+  padding-top: 10vh;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.fa-rihand {
+  padding: 10px;
+  border: solid 1px;
+  border-radius: 25px;
+}
+
+.btn-rihand {
+  background-color: #4272a1 !important;
+  color: white !important;
+}
+
+div#buktiPembayaranGambar>img {
+  max-width: 100% !important;
+}
+
+.buktiPembayaranGambar {
+  max-width: 70% !important;
+}
+
+.card-rihand {
+  border-radius: 15px;
+}
+
+.card-rihand-img {
+  background-color: #ffd897;
+  padding: 15px;
+  z-index: 99;
+  position: relative;
+  top: 25px;
+}
+
+.card-rihand-img-list {
+  background-color: #FFF;
+  padding: 20px;
+}
+
+.card-rihand-body {
+  background-color: #fed6ce;
+  border-radius: 15px;
+  text-align: left !important;
+}
+
+.card-rihand-list {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.card-rihand-list:hover {
+  border: solid 0px #cbaba4;
+  border-radius: 10px;
+  background-color: #fee2dc;
+}
+
+.card-rihand-img-list-caption {
+  font-size: larger;
+}
+
+#loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #aac8e0;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
