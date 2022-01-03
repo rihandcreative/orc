@@ -1,3 +1,8 @@
+/* Resize Image */
+#buktiPembayaranGambar img, #cekPembayaran {
+    width: 100% !important;
+}
+
 /* Style the input fields */
 input.form-control, select.form-select {
     border-radius: 10px;
