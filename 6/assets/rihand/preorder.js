@@ -77,7 +77,7 @@ function cekUserId() {
 // Count Price
 document.getElementById('Provinsi').addEventListener('change', e => {
     var provinsi = document.getElementById('Provinsi');
-    var harga    = parseFloat(provinsi.options[provinsi.selectedIndex].getAttribute('data-harga')) + 140000;
+    var harga    = parseFloat(provinsi.options[provinsi.selectedIndex].getAttribute('data-harga')) + 135000;
     document.getElementById('total').innerHTML      = harga;
     document.getElementById('totalInput').value     = harga;
 });

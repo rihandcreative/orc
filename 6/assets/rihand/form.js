@@ -96,10 +96,10 @@ function uploadFile(file) {
     var fd = new FormData();
     xhr.open('POST', url, true);
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    document.getElementById('buktiPembayaranGambar').innerHTML = "<center><div id='loader'></div></center>";
 
     xhr.onreadystatechange = function(e) {
 
-        document.getElementById('buktiPembayaranGambar').innerHTML = "<div id='loader'></div>";
         if (xhr.readyState == 4 && xhr.status == 200) {
 
             var response = JSON.parse(xhr.responseText);
