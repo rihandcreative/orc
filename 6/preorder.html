@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORC-VI | Pendaftaran</title>
+    <title>ORC-VI | Pemesanan Reward</title>
     <link rel="icon" type="image/x-icon" href="assets/rihand/logo-plain.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/plugins/icons/font/bootstrap-icons.css">
@@ -24,6 +24,7 @@
             <div class="card-body">
                 
                 <form id="formRegistrasi" method="POST" autocomplete="off">
+                <input type="hidden" name="Sertifikat" id="Sertifikat">
                     
                     <h1 class="text-center">ORC-VI</h1>
                     <h5 class="text-center">Pemesanan Reward</h5>
@@ -76,6 +77,18 @@
                             </div>
                         </div>
 
+                        <br>
+
+                        <!-- <label for="BukuSoal">Apakah ingin memesan Buku Kompilasi Soal ORC 2021?</label> -->
+                        <div class="input-group mb-3 d-none">
+                            <span class="input-group-text"><i class="bi bi-box-arrow-up-right"></i></span>
+                            <select name="BukuSoal" id="BukuSoal">
+                                <option value="" hidden></option>
+                                <option value="Ya" data-harga="100000">Ya</option>
+                                <option value="Tidak" data-harga="0" selected>Tidak</option>
+                            </select>
+                        </div>
+
                     </div>
 
                     <div class="tab">
@@ -99,33 +112,33 @@
                             </div>
                             <div class="col-md-3 col-5 mb-3">
                                 <h6>Kode Pos</h6>
-                                <input class="number" type="text" name="KodePos" id="kodepos">
+                                <input type="text" name="KodePos" id="kodepos">
                             </div>
                         </div>
                         
                         <div class="row">
                             <div class="col-3 mb-3">
                                 <h6>RT</h6>
-                                <input class="number" type="text" name="RT" id="rt">
+                                <input type="text" name="RT" id="rt">
                             </div>
                             <div class="col-3 mb-3">
                                 <h6>RW</h6>
-                                <input class="number" type="text" name="RW" id="rw">
+                                <input type="text" name="RW" id="rw">
                             </div>
                             <div class="col-6 mb-3">
                                 <h6>Kelurahan</h6>
-                                <input class="input" type="text" name="Kelurahan" id="kelurahan">
+                                <input type="text" name="Kelurahan" id="kelurahan">
                             </div>
                         </div>
                         
                         <div class="row">
                             <div class="col-6 mb-4">
                                 <h6>Kecamatan</h6>
-                                <input class="input" type="text" name="Kecamatan" id="kecamatan">
+                                <input type="text" name="Kecamatan" id="kecamatan">
                             </div>
                             <div class="col-6 mb-4">
                                 <h6>Kota/Kabupaten</h6>
-                                <input class="input" type="text" name="Kota" id="kota">
+                                <input type="text" name="Kota" id="kota">
                             </div>
                         </div>
 
@@ -211,11 +224,6 @@
                                 </div>
                             </div>
                         </div>
-            
-                        <div class="input-group mb-3">
-                            <span class="input-group-text"><i class="bi bi-box-arrow-in-up-right"></i></span>
-                            <input type="text" placeholder="Bank/Aplikasi Transfer Dari" name="TransferDari" id="TransferDari">
-                        </div>
 
                         <div class="input-group mb-3">
                             <span class="input-group-text"><i class="bi bi-box-arrow-up-right"></i></span>
@@ -226,6 +234,13 @@
                                 <option value="Mandiri">Transfer Mandiri</option>
                                 <option value="Voucher">Voucher</option>
                             </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Catatan">Catatan</label>
+                            <textarea class="form-control" name="Catatan" id="Catatan" cols="30" rows="5" placeholder="(Jika tidak ada, isi dengan tanda -)
+
+Contoh: Satu alamat dengan ... (nama peserta lain) / Menggunakan voucher ... (50%/dsb)" data-required="no"></textarea>
                         </div>
 
                         <div class="upload_button_holder">
@@ -266,9 +281,13 @@
                                 <th scope="row" valign="top">Alamat</th>
                                 <td>: <span id="cekAlamat"></span></td>
                             </tr>
+                            <tr class="d-none">
+                                <th scope="row" valign="top">Tambahan Buku Soal</th>
+                                <td>: <span id="cekBukusoal"></span></td>
+                            </tr>
                             <tr>
                                 <th scope="row" valign="top">Pembayaran</th>
-                                <td>: <span id="cekTransferDari"></span> &rarr; <span id="cekTransferKe"></span> <br> <img id="cekPembayaran"></td>
+                                <td>: <span id="cekTransferDari"></span> &rarr; <span id="cekTransferKe"></span> <br> <img id="cekPembayaran" width="50vw"></td>
                             </tr>
                         </table>
                         

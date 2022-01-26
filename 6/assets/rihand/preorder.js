@@ -1,7 +1,8 @@
 // Multistep Form Attribute
 var input = document.querySelectorAll('#formRegistrasi input[type="text"]');
 for (var i=0; i < input.length; i++) {
-    input[i].setAttribute('onkeyup', 'caseUpper(this); caseText(this)');
+    // input[i].setAttribute('onkeyup', 'caseUpper(this); caseText(this)');
+    input[i].setAttribute('onkeyup', 'caseText(this)');
     input[i].setAttribute('oninput', 'this.classList.remove("invalid")')
     input[i].classList.add('form-control');
 }
@@ -53,33 +54,45 @@ if(getParams.uid !== undefined) {
 
 // Cek User ID
 function cekUserId() {
-	var userID 			= document.getElementById("UserID").value;
+	var userID 	    = document.getElementById("UserID").value;
 	var fetchUser 	= userList.find(o => o.userid === userID);
 
 	if(!fetchUser) {
 		document.getElementById("alert-userid").classList.remove('d-none');
-    document.getElementById("nextBtn").classList.add('d-none');
-		document.getElementById("NamaLengkap").value 		= '';
+        document.getElementById("nextBtn").classList.add('d-none');
+		document.getElementById("NamaLengkap").value= '';
 		document.getElementById("Sekolah").value 	= '';
 		document.getElementById("Bidang").value 	= '';
 		document.getElementById("Peringkat").value 	= '';
+        document.getElementById("Sertifikat").value = '';
 	} else {
 		document.getElementById("alert-userid").classList.add('d-none');
         document.getElementById("nextBtn").classList.remove('d-none');
-		document.getElementById("NamaLengkap").value 			= fetchUser.nama.toUpperCase();
+		document.getElementById("NamaLengkap").value 	= fetchUser.nama.toUpperCase();
 		document.getElementById("Sekolah").value 		= fetchUser.sekolah.toUpperCase();
 		document.getElementById("Bidang").value 		= fetchUser.bidang.toUpperCase();
-		document.getElementById("Peringkat").value 	= fetchUser.peringkat;
-        document.getElementById("Medali").value     = fetchUser.medali.toUpperCase();
+		document.getElementById("Peringkat").value      = fetchUser.peringkat;
+        document.getElementById("Medali").value         = fetchUser.medali.toUpperCase();
+        document.getElementById("Sertifikat").value     = fetchUser.sertifikat;
 	}
 }
 
 // Count Price
 document.getElementById('Provinsi').addEventListener('change', e => {
+    var bukusoal = document.getElementById('BukuSoal');
     var provinsi = document.getElementById('Provinsi');
-    var harga    = parseFloat(provinsi.options[provinsi.selectedIndex].getAttribute('data-harga')) + 135000;
+    var harga    = parseFloat(provinsi.options[provinsi.selectedIndex].getAttribute('data-harga')) + parseFloat(bukusoal.options[bukusoal.selectedIndex].getAttribute('data-harga')) + 135000;
     document.getElementById('total').innerHTML      = harga;
     document.getElementById('totalInput').value     = harga;
+    console.log(harga);
+});
+document.getElementById('BukuSoal').addEventListener('change', e => {
+    var bukusoal = document.getElementById('BukuSoal');
+    var provinsi = document.getElementById('Provinsi');
+    var harga    = parseFloat(provinsi.options[provinsi.selectedIndex].getAttribute('data-harga')) + parseFloat(bukusoal.options[bukusoal.selectedIndex].getAttribute('data-harga')) + 135000;
+    document.getElementById('total').innerHTML      = harga;
+    document.getElementById('totalInput').value     = harga;
+    console.log(harga);
 });
 
 // Cek Data All
@@ -93,8 +106,9 @@ function cekData() {
     document.getElementById('cekMedali').innerHTML      = document.getElementById('Medali').value;
     document.getElementById('cekAlamat').innerHTML      = alamatFix;
     document.getElementById('Alamat').value             = alamatFix;
-    document.getElementById('cekTransferDari').innerHTML= document.getElementById('TransferDari').value;
     document.getElementById('cekTransferKe').innerHTML  = document.getElementById('TransferKe').value;
+    document.getElementById('cekBukusoal').innerHTML    = document.getElementById('BukuSoal').value;
+    console.log(alamatFix);
 }
 
 // Submit
