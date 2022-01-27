@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORC-VI | Pemesanan Reward</title>
+    <link rel="icon" type="image/x-icon" href="assets/rihand/logo-plain.ico">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/rihand/form.css">
+    <link rel="stylesheet" href="assets/rihand/preorder.css">
+</head>
+<body>
+<main class="m-5">
+
+    <div class="text-center p-3 mb-3">
+        <img src="assets/rihand/logo-text.png" class="" width="200vw" alt="">
+    </div>
+    
+    
+    <div class="col-md-8 offset-md-2">
+        <div class="card p-3">
+            <div class="card-body">
+                
+                <form id="formRegistrasi" method="POST" autocomplete="off">
+                <input type="hidden" name="Sertifikat" id="Sertifikat">
+                    
+                    <h1 class="text-center">ORC-VI</h1>
+                    <h5 class="text-center">Pemesanan Reward</h5>
+                    <div class="text-center">
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                    </div><br>
+
+                    <div class="tab">
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="bi bi-bank"></i></span>
+                            <input type="text" placeholder="Nama Sekolah" name="Sekolah" id="Sekolah">
+                        </div>
+                        
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                            <input type="text" placeholder="Nama Koordinator" name="NamaPanggilan" id="NamaPanggilan">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-whatsapp"></i></span>
+                            <input type="number" placeholder="Nomor WA" name="NomorWA" id="NomorWA">
+                        </div>
+                        <p class="form-text mb-3">*) Isi dengan angka saja, awali dengan 0 (contoh: 08123456789)</p>
+
+                        <div class="row">
+                            <div class="col-md-9 col-7 mb-3">
+                                <h6>Alamat Pengiriman</h6>
+                                <textarea class="form-control" name="AlamatInput" id="alamatInput" cols="30" rows="5" placeholder="Nomor dan Nama Jalan, Petunjuk Alamat"></textarea>
+                            </div>
+                            <div class="col-md-3 col-5 mb-3">
+                                <h6>Kode Pos</h6>
+                                <input type="text" name="KodePos" id="kodepos">
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-3 mb-3">
+                                <h6>RT</h6>
+                                <input type="text" name="RT" id="rt">
+                            </div>
+                            <div class="col-3 mb-3">
+                                <h6>RW</h6>
+                                <input type="text" name="RW" id="rw">
+                            </div>
+                            <div class="col-6 mb-3">
+                                <h6>Kelurahan</h6>
+                                <input type="text" name="Kelurahan" id="kelurahan">
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-6 mb-4">
+                                <h6>Kecamatan</h6>
+                                <input type="text" name="Kecamatan" id="kecamatan">
+                            </div>
+                            <div class="col-6 mb-4">
+                                <h6>Kota/Kabupaten</h6>
+                                <input type="text" name="Kota" id="kota">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="bi bi-pin-map"></i></span>
+                            <!-- <input type="text" placeholder="Provinsi" name="Provinsi" id="Provinsi" list="ProvinsiDatalist"> -->
+                            <select id="Provinsi" name="Provinsi">
+                                <option value="" selected hidden>Provinsi</option>
+                                <option data-harga="60000" value="Aceh">Aceh</option>
+                                <option data-harga="50000" value="Sumatera Utara">Sumatera Utara</option>
+                                <option data-harga="45000" value="Sumatera Barat">Sumatera Barat</option>
+                                <option data-harga="50000" value="Riau">Riau</option>
+                                <option data-harga="50000" value="Jambi">Jambi</option>
+                                <option data-harga="45000" value="Sumatera Selatan">Sumatera Selatan</option>
+                                <option data-harga="55000" value="Bengkulu">Bengkulu</option>
+                                <option data-harga="50000" value="Lampung">Lampung</option>
+                                <option data-harga="50000" value="Bangka Belitung">Bangka Belitung</option>
+                                <option data-harga="45000" value="Kepulauan Riau">Kepulauan Riau</option>
+                                <option data-harga="25000" value="Jakarta">Jakarta</option>
+                                <option data-harga="25000" value="Jawa Barat">Jawa Barat</option>
+                                <option data-harga="25000" value="Banten">Banten</option>
+                                <option data-harga="25000" value="Jawa Tengah">Jawa Tengah</option>
+                                <option data-harga="25000" value="Yogyakarta">Yogyakarta</option>
+                                <option data-harga="25000" value="Jawa Timur">Jawa Timur</option>
+                                <option data-harga="45000" value="Kalimantan Barat">Kalimantan Barat</option>
+                                <option data-harga="40000" value="Kalimantan Tengah">Kalimantan Tengah</option>
+                                <option data-harga="40000" value="Kalimantan Selatan">Kalimantan Selatan</option>
+                                <option data-harga="50000" value="Kalimantan Timur">Kalimantan Timur</option>
+                                <option data-harga="75000" value="Kalimantan Utara">Kalimantan Utara</option>
+                                <option data-harga="25000" value="Bali">Bali</option>
+                                <option data-harga="75000" value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+                                <option data-harga="30000" value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+                                <option data-harga="75000" value="Sulawesi Utara">Sulawesi Utara</option>
+                                <option data-harga="60000" value="Sulawesi Tengah">Sulawesi Tengah</option>
+                                <option data-harga="50000" value="Sulawesi Selatan">Sulawesi Selatan</option>
+                                <option data-harga="70000" value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+                                <option data-harga="60000" value="Sulawesi Barat">Sulawesi Barat</option>
+                                <option data-harga="75000" value="Gorontalo">Gorontalo</option>
+                                <option data-harga="75000" value="Maluku">Maluku</option>
+                                <option data-harga="75000" value="Maluku Utara">Maluku Utara</option>
+                                <option data-harga="140000" value="Papua">Papua</option>
+                                <option data-harga="140000" value="Papua Barat">Papua Barat</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="tab">
+                        
+                        <input type="hidden" name="Alamat" id="Alamat" readonly>
+                        <img id="cekPembayaran" class="d-none">
+
+                        Biaya Pendaftaran:
+                        <h3>Rp<span id="total">0</span>
+                            <input type="hidden" name="Total" id="totalInput"></h3><br>
+                            Ketentuan:
+                            <ul>
+                                <li>Paket reward free khusus untuk juara 1 di setiap bidang (belum termasuk ongkir).</li>
+                            <li>Peserta yang mendapatkan voucher 100% tetap membayarkan ongkir.</li>
+                        </ul>
+                        <div>
+                            Metode Pembayaran:
+                            <ul>
+                                <li>
+                                    <b>Bank Transfer</b>
+                                    <ul>
+                                        <li>Mandiri: 1440022220229</li>
+                                        <li>BCA: 0113100424</li>
+                                        <li>(a/n Rihand Kreatif Indonesia)</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <b>QR Code</b><br> (jika ingin membayar via e-wallet seperti GoPay, OVO, Dana, dll. atau e-banking)<br>
+                                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#qris">Lihat QR Code</button>
+                                </li>
+                            </ul>
+                        </div><hr>
+
+                        <div class="modal fade" id="qris" tabindex="-1" aria-labelledby="qrisLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="qrisLabel">QR CODE</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="assets/rihand/qrcode.jpeg" width="100%" class="rounded">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="bi bi-box-arrow-up-right"></i></span>
+                            <select name="TransferKe" id="TransferKe">
+                                <option value="" selected hidden>Pembayaran Menuju</option>
+                                <option value="QRIS">Kode QR</option>
+                                <option value="BCA">Transfer BCA</option>
+                                <option value="Mandiri">Transfer Mandiri</option>
+                                <option value="Voucher">Voucher</option>
+                            </select>
+                        </div>
+
+                        <div class="upload_button_holder">
+                            <input type="file" id="fileElem" accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+                            <a href="#" id="fileSelect" class="btn btn-success col-12 mb-2 p-2 rounded-pill"><i class="bi bi-upload"></i> Pilih Bukti Pembayaran</a>
+                        </div>
+                        <small>*) Silahkan tunggu bukti pembayaran untuk tampil di bawah ini sebelum klik tombol Lanjut. Jika gambar tidak muncul, silahkan periksa koneksi internet dan upload ulang.</small><br><br>
+                        <input type="hidden" id="BuktiPembayaran" name="BuktiPembayaran">
+                        <div id="buktiPembayaranGambar">
+                            <center><div id="loader" class="d-none"></div></center>
+                        </div><br>
+            
+                    </div>
+
+                    <div class="tab">
+
+                        <button type="submit" id="submitBtn" class="btn btn-success p-2 col-12 rounded-pill"><i class="bi bi-check-circle-fill"></i> Kirim</button>
+                        <button type="button" id="loadBtn" class="btn btn-success p-2 col-12 rounded-pill d-none" disabled><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...</button>
+                        
+                        <div id="tabSuccess" class="d-none">
+                            
+                            <div class="alert alert-success text-center" role="alert">
+                                <h4 class="alert-heading"><i class="bi bi-check-circle-fill"></i> Data Terkirim</h4>
+                                <p>Terima kasih dan sampai jumpa di ORC-VII 2022!</p><hr>
+                                <a href="./info" target="_blank" class="btn btn-primary"><i class="bi bi-book"></i> Baca Panduan Pelaksanaan</a><br>
+                            </div>
+
+                        </div>
+                    
+                    </div>
+                    
+                    <div style="overflow:auto;">
+                        <div style="float:right;">
+                            <button type="button" class="btn btn-secondary" id="prevBtn" onclick="nextPrev(-1);">Kembali &larr;</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextPrev(1); cekData();">Lanjut &rarr;</button>
+                        </div>
+                    </div>
+
+                </form>
+                
+            </div>
+
+            <small class="text-center"><hr>PT. Rihand Kreatif Indonesia<br>AHU-0091101.AH.01.11</small>
+            
+        </div>
+    </div>
+
+</main>
+
+<br><br><br>
+
+<img src="assets/rihand/maskot.png" class="img-maskot" alt="" srcset="">
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/rihand/form.js"></script>
+<script src="assets/rihand/preorderdata.js"></script>
+<script src="assets/rihand/preorder2.js"></script>
+
+</body>
+</html>
