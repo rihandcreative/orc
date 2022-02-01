@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar / ORC-VII &mdash; Olimpiade Rihand Creative</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/icons-1.8.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/plugins/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="assets/rihandcreative/_default.css">
+</head>
+<body>
+
+<div class="container pt-5 pb-5">
+
+    <div class="text-center mb-3"><img src="assets/rihandcreative/logo-text.png" alt="" width="40%"></div>
+
+    <div class="card">
+        <div class="card-header text-center">
+            <h1>ORC-VII 2022</h1>
+            <h4>Pendaftaran Mandiri</h4>
+        </div>
+        <div class="card-body p-5">
+
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeQXUSAwkRdaANR2bk0ckn-d08AC8Xi0oit1au47pTXHb96aA/formResponse"
+                target="_self"
+                id="form"
+                method="POST">
+
+                <!-- BATCH -->  <input type="hidden" id="1260867894" name="entry.1260867894" value="I">
+                <!-- USERID --> <input type="hidden" id="1240909360" name="entry.1240909360">
+
+
+                <!-- Field type: "short" id: "672491668" -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="838629778" name="entry.838629778" placeholder="Nama Lengkap" oninput="createUserid();" required>
+                        <label for="838629778">Nama Lengkap</label>
+                    </div>  
+                </div>
+
+
+                <!-- Field type: "short" id: "1050163862" -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-bank2"></i></span>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="1394517385" name="entry.1394517385" placeholder="Nama Sekolah" required>
+                        <label for="1394517385">Nama Sekolah</label>
+                    </div>  
+                </div>
+
+
+                <!-- Field type: "short" id: "1946149688" -->
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-whatsapp"></i></span>
+                    <div class="form-floating">
+                        <input type="number" class="form-control" id="1257492361" name="entry.1257492361" placeholder="Nomor WhatsApp Peserta" required>
+                        <label for="1257492361">Nomor WhatsApp Peserta</label>
+                    </div>  
+                </div>
+                <small class="form-text mb-3">*) Awali dengan 0 (contoh: 081234567890)</small><br><br>
+
+
+                <!-- Field type: "dropdown" id: "1022119677" -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-pin-map-fill"></i></span>
+                    <div class="form-floating">
+                        <select id="1022119677" name="entry.70405405" class="form-select" required>
+                            <option value="" hidden selected>--&nbsp;Klik Untuk Memilih&nbsp;--</option>
+                            <option value="Aceh">Aceh</option>
+                            <option value="Sumatera Utara">Sumatera Utara</option>
+                            <option value="Sumatera Barat">Sumatera Barat</option>
+                            <option value="Riau">Riau</option>
+                            <option value="Jambi">Jambi</option>
+                            <option value="Sumatera Selatan">Sumatera Selatan</option>
+                            <option value="Bengkulu">Bengkulu</option>
+                            <option value="Lampung">Lampung</option>
+                            <option value="Kepulauan Bangka Belitung">Kepulauan Bangka Belitung</option>
+                            <option value="Kepulauan Riau">Kepulauan Riau</option>
+                            <option value="DKI Jakarta">DKI Jakarta</option>
+                            <option value="Jawa Barat">Jawa Barat</option>
+                            <option value="Jawa Tengah">Jawa Tengah</option>
+                            <option value="DI Yogyakarta">DI Yogyakarta</option>
+                            <option value="Jawa Timur">Jawa Timur</option>
+                            <option value="Banten">Banten</option>
+                            <option value="Bali">Bali</option>
+                            <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+                            <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+                            <option value="Kalimantan Barat">Kalimantan Barat</option>
+                            <option value="Kalimantan Tengah">Kalimantan Tengah</option>
+                            <option value="Kalimantan Selatan">Kalimantan Selatan</option>
+                            <option value="Kalimantan Timur">Kalimantan Timur</option>
+                            <option value="Kalimantan Utara">Kalimantan Utara</option>
+                            <option value="Sulawesi Utara">Sulawesi Utara</option>
+                            <option value="Sulawesi Tengah">Sulawesi Tengah</option>
+                            <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+                            <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+                            <option value="Gorontalo">Gorontalo</option>
+                            <option value="Sulawesi Barat">Sulawesi Barat</option>
+                            <option value="Maluku">Maluku</option>
+                            <option value="Maluku Utara">Maluku Utara</option>
+                            <option value="Papua">Papua</option>
+                            <option value="Papua Barat">Papua Barat</option>
+                        </select>
+                        <label for="1022119677">Provinsi</label>
+                    </div>  
+                </div>
+
+                <br><hr><br>
+
+                <!-- Field type: "choices" id: "236803822" -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-signpost-split-fill"></i></span>
+                    <div class="form-floating">
+                        <select id="236803822" name="entry.973107010" class="form-select" required>
+                            <option value="" hidden selected>--&nbsp;Klik Untuk Memilih&nbsp;--</option>
+                            <option value="SD">SD</option>
+                            <option value="SMP">SMP</option>
+                            <option value="SMA">SMA</option>
+                        </select>
+                        <label for="236803822">Jenjang</label>
+                    </div>  
+                </div>
+
+
+                <!-- Field type: "dropdown" id: "602112567" -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-clipboard-check"></i></span>
+                    <div class="form-floating">
+                        <select id="602112567" name="entry.1559956431" class="form-select" required>
+                            <option value="" hidden selected>--&nbsp;Klik Untuk Memilih&nbsp;--</option>
+                            <option value="SD 4">SD 4</option>
+                            <option value="SD 5">SD 5</option>
+                            <option value="SD 6">SD 6</option>
+                            <option value="SMP 1">SMP 1</option>
+                            <option value="SMP 2">SMP 2</option>
+                            <option value="SMP 3">SMP 3</option>
+                            <option value="SMA 1">SMA 1</option>
+                            <option value="SMA 2">SMA 2</option>
+                            <option value="SMA 3">SMA 3</option>
+                        </select>
+                        <label for="602112567">Kelas</label>
+                    </div>  
+                </div>
+
+
+                <!-- Field type: "dropdown" id: "1888288591" -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
+                    <div class="form-floating">
+                        <select id="1888288591" name="entry.1394269626" class="form-select" required>
+
+                            <option value="" hidden selected>--&nbsp;Klik Untuk Memilih&nbsp;--</option>
+                            <option value="" disabled id="bidangHold">Silahkan memilih jenjang dan kelas terlebih dahulu.</option>
+
+                            <optgroup id="bidangSD" class="d-none" label="Sekolah Dasar">
+                                <option value="SD Bahasa Inggris">SD Bahasa Inggris</option>
+                                <option value="SD Matematika">SD Matematika</option>
+                                <option value="SD IPA">SD IPA</option>
+                                <option value="SD Bahasa Indonesia">SD Bahasa Indonesia</option>
+                            </optgroup>
+                            <optgroup id="bidangSMP" class="d-none" label="Sekolah Menengah Pertama">
+                                <option value="SMP Bahasa Inggris">SMP Bahasa Inggris</option>
+                                <option value="SMP Matematika">SMP Matematika</option>
+                                <option value="SMP IPA">SMP IPA</option>
+                                <option value="SMP IPS">SMP IPS</option>
+                                <option value="SMP Bahasa Indonesia">SMP Bahasa Indonesia</option>
+                            </optgroup>
+                            <optgroup id="bidangSMA" class="d-none" label="Sekolah Menengah Atas">
+                                <option value="SMA Bahasa Inggris">SMA Bahasa Inggris</option>
+                                <option value="SMA Biologi">SMA Biologi</option>
+                                <option value="SMA Ekonomi">SMA Ekonomi</option>
+                            </optgroup>
+                        </select>
+                        <label for="1888288591">Bidang</label>
+                    </div>  
+                </div>
+
+                <br><hr><br>
+
+                Biaya Pendaftaran:
+                <h3>Rp30.000<span style="font-size: small;"> / bidang</span></h3>
+                <div>
+                    Metode Pembayaran:
+                    <ul>
+                        <li>
+                            <b>Bank Transfer</b>
+                            <ul>
+                                <li>Mandiri: 1440022220229</li>
+                                <li>BCA: 0113100424</li>
+                                <li>(a/n Rihand Kreatif Indonesia)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>QR Code</b><br> (jika ingin membayar via e-wallet seperti GoPay, OVO, Dana, dll. atau e-banking)<br>
+                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#qris">Lihat QR Code</button>
+                        </li>
+                    </ul>
+                </div>
+                
+                <br><hr><br>
+
+                <div class="modal fade" id="qris" tabindex="-1" aria-labelledby="qrisLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="qrisLabel">QR CODE</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="assets/rihandcreative/qrcode.jpeg" width="100%" class="rounded">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <fieldset>
+                    <legend for="fileSelect">Bukti Pembayaran</legend>
+                    <div class="upload_button_holder">
+                        <input type="file" id="fileElem" accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+                        <a href="#" id="fileSelect" class="btn btn-success col-12 mb-2 p-2 rounded-pill"><i class="bi bi-upload"></i> Pilih Bukti Pembayaran</a>
+                    </div>
+                    <small>*) Silahkan tunggu bukti pembayaran untuk tampil di bawah ini. Jika gambar tidak muncul, silahkan periksa koneksi internet dan upload ulang.</small><br><br>
+                    <input type="hidden" id="298692959" name="entry.298692959">
+                    <div id="buktiPembayaranGambar"></div><br>
+                </fieldset><br>
+
+
+                <!-- Field type: "choices" id: "1525168852" -->
+                <fieldset>
+                    <legend for="1525168852">Tujuan Pembayaran</legend>
+                    <div class="form-group">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="entry.1009010964" value="Kode QR" required>
+                                Kode QR
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="entry.1009010964" value="Transfer: BCA" required>
+                                Transfer: BCA
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="entry.1009010964" value="Transfer: Mandiri" required>
+                                Transfer: Mandiri
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="entry.1009010964" value="Voucher" required>
+                                Voucher
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <br><hr>
+
+                <input type="hidden" name="fvv" value="1">
+                <input type="hidden" name="fbzx" value="-7220187190807540089">
+                <!--
+                    CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+                    This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+                    Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+                    We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+                -->
+                <input type="hidden" name="pageHistory" value="0">
+
+                <!-- <script>document.getElementById('submit').value = "<i class='bi bi-send-check'></i> Kirim Data";</script> -->
+                <input class="btn btn-primary col-12 p-3 mt-5 rounded-pill" type="submit" value="&#10004; Kirim Data"><br>
+                <small>*) Mohon klik tombol Kirim Data <b>SEKALI SAJA</b> dan tunggu hingga muncul tulisan "Data Terkirim".</small>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!-- <div class="custom-shape-divider-bottom-1643712282">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
+</div> -->
+
+<script src="assets/plugins/jquery/jquery-3.6.0.min.js"></script>
+<script src="assets/plugins/jquery/jquery.form.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/plugins/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="assets/rihandcreative/cloudinary.js"></script>
+<script src="assets/rihandcreative/daftar.js"></script>
+
+</body>
+</html>
