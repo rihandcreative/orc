@@ -26,7 +26,9 @@
             <form action="https://docs.google.com/forms/d/e/1FAIpQLSeQXUSAwkRdaANR2bk0ckn-d08AC8Xi0oit1au47pTXHb96aA/formResponse"
                 target="_self"
                 id="form"
-                method="POST">
+                method="POST"
+                name="formDaftar"
+                onsubmit="return validateForm();">
 
                 <!-- BATCH -->  <input type="hidden" id="1260867894" name="entry.1260867894" value="I">
                 <!-- USERID --> <input type="hidden" id="1240909360" name="entry.1240909360">
@@ -182,6 +184,89 @@
 
                 <br><hr><br>
 
+                <h4 class="mb-4">Rincian di bawah ini digunakan untuk pemesanan reward (medali dan piagam).</h4>
+
+                <div class="row">
+                    <div class="col-md-9 col-7 mb-3">
+                        <h6>Alamat Pengiriman</h6>
+                        <textarea oninput="validateAlamat();" class="form-control" name="AlamatInput" id="alamatInput" cols="30" rows="5" placeholder="Nomor dan Nama Jalan, Petunjuk Alamat"></textarea>
+                        <input type="hidden" name="entry.1210374602" id="1210374602" readonly>
+                    </div>
+                    <div class="col-md-3 col-5 mb-3">
+                        <h6>Kode Pos</h6>
+                        <input oninput="validateAlamat();" type="text" class="form-control" name="KodePos" id="kodepos">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-3 mb-3">
+                        <h6>RT</h6>
+                        <input oninput="validateAlamat();" type="text" class="form-control" name="RT" id="rt">
+                    </div>
+                    <div class="col-3 mb-3">
+                        <h6>RW</h6>
+                        <input oninput="validateAlamat();" type="text" class="form-control" name="RW" id="rw">
+                    </div>
+                    <div class="col-6 mb-3">
+                        <h6>Kelurahan</h6>
+                        <input oninput="validateAlamat();" type="text" class="form-control" name="Kelurahan" id="kelurahan">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-6 mb-4">
+                        <h6>Kecamatan</h6>
+                        <input oninput="validateAlamat();" type="text" class="form-control" name="Kecamatan" id="kecamatan">
+                    </div>
+                    <div class="col-6 mb-4">
+                        <h6>Kota/Kabupaten</h6>
+                        <input oninput="validateAlamat();" type="text" class="form-control" name="Kota" id="kota">
+                    </div>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-pin-map"></i></span>
+                    <select onchange="validateAlamat();" id="Provinsi" name="Provinsi" class="form-select">
+                        <option value="" selected hidden>Provinsi</option>
+                        <option data-harga="60000" value="Aceh">Aceh</option>
+                        <option data-harga="50000" value="Sumatera Utara">Sumatera Utara</option>
+                        <option data-harga="45000" value="Sumatera Barat">Sumatera Barat</option>
+                        <option data-harga="50000" value="Riau">Riau</option>
+                        <option data-harga="50000" value="Jambi">Jambi</option>
+                        <option data-harga="45000" value="Sumatera Selatan">Sumatera Selatan</option>
+                        <option data-harga="55000" value="Bengkulu">Bengkulu</option>
+                        <option data-harga="50000" value="Lampung">Lampung</option>
+                        <option data-harga="50000" value="Bangka Belitung">Bangka Belitung</option>
+                        <option data-harga="45000" value="Kepulauan Riau">Kepulauan Riau</option>
+                        <option data-harga="25000" value="Jakarta">Jakarta</option>
+                        <option data-harga="25000" value="Jawa Barat">Jawa Barat</option>
+                        <option data-harga="25000" value="Banten">Banten</option>
+                        <option data-harga="25000" value="Jawa Tengah">Jawa Tengah</option>
+                        <option data-harga="25000" value="Yogyakarta">Yogyakarta</option>
+                        <option data-harga="25000" value="Jawa Timur">Jawa Timur</option>
+                        <option data-harga="45000" value="Kalimantan Barat">Kalimantan Barat</option>
+                        <option data-harga="40000" value="Kalimantan Tengah">Kalimantan Tengah</option>
+                        <option data-harga="40000" value="Kalimantan Selatan">Kalimantan Selatan</option>
+                        <option data-harga="50000" value="Kalimantan Timur">Kalimantan Timur</option>
+                        <option data-harga="75000" value="Kalimantan Utara">Kalimantan Utara</option>
+                        <option data-harga="25000" value="Bali">Bali</option>
+                        <option data-harga="75000" value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+                        <option data-harga="30000" value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+                        <option data-harga="75000" value="Sulawesi Utara">Sulawesi Utara</option>
+                        <option data-harga="60000" value="Sulawesi Tengah">Sulawesi Tengah</option>
+                        <option data-harga="50000" value="Sulawesi Selatan">Sulawesi Selatan</option>
+                        <option data-harga="70000" value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+                        <option data-harga="60000" value="Sulawesi Barat">Sulawesi Barat</option>
+                        <option data-harga="75000" value="Gorontalo">Gorontalo</option>
+                        <option data-harga="75000" value="Maluku">Maluku</option>
+                        <option data-harga="75000" value="Maluku Utara">Maluku Utara</option>
+                        <option data-harga="140000" value="Papua">Papua</option>
+                        <option data-harga="140000" value="Papua Barat">Papua Barat</option>
+                    </select>
+                </div>
+
+                <br><hr><br>
+
                 Biaya Pendaftaran:
                 <h3>Rp30.000<span style="font-size: small;"> / bidang</span></h3>
                 <div>
@@ -228,10 +313,9 @@
                         <a href="#" id="fileSelect" class="btn btn-success col-12 mb-2 p-2 rounded-pill"><i class="bi bi-upload"></i> Pilih Bukti Pembayaran</a>
                     </div>
                     <small>*) Silahkan tunggu bukti pembayaran untuk tampil di bawah ini. Jika gambar tidak muncul, silahkan periksa koneksi internet dan upload ulang.</small><br><br>
-                    <input type="hidden" id="298692959" name="entry.298692959" required>
+                    <input type="text" id="298692959" name="entry.298692959" class="d-none" required>
                     <div id="buktiPembayaranGambar"></div><br>
                 </fieldset><br>
-
 
                 <!-- Field type: "choices" id: "1525168852" -->
                 <fieldset>

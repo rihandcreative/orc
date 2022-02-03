@@ -49,6 +49,16 @@ jenjang.addEventListener('change', () => {
 
 });
 
+// Validate Alamat
+function validateAlamat() {
+    
+    var provinsi    = document.getElementById('Provinsi');
+    var alamatFix   = document.getElementById('alamatInput').value + ', RT ' + document.getElementById('rt').value + ' / RW ' + document.getElementById('rw').value + ', ' + document.getElementById('kelurahan').value + ', ' + document.getElementById('kecamatan').value + ', ' + document.getElementById('kota').value + ', ' + provinsi.options[provinsi.selectedIndex].value + ' (' + document.getElementById('kodepos').value + ')';
+    document.getElementById('1210374602').value = alamatFix;
+    console.log(alamatFix);
+
+}
+
 // Get Form Submitted Parameter from URL
 var getParams = {}
 location.search.substr(1).split("&").forEach(function(item) {getParams[item.split("=")[0]] = item.split("=")[1]})
