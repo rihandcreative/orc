@@ -13,7 +13,7 @@ function caseUpper(event) {
 
 // Create UserID
 function createUserid() {
-    var userRand    = Math.floor(Math.random() * 9999) + 1111;
+    var userRand    = Math.floor(Math.random() * 8888) + 1111;
     var inputUser   = document.getElementById('1240909360');
     var inputNama   = document.getElementById('838629778');
     inputUser.value = '';
