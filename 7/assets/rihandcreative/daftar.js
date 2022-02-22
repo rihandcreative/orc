@@ -75,7 +75,7 @@ if(getParams.submit !== undefined) {
         cancelButtonText: "Saya sudah join group dan ingin mengisi form lagi",
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location = "https://rihand.link/orc7-group3";
+            window.location = "https://rihand.link/orc7-group4";
         } else {
             window.location = "./daftar";
         }
