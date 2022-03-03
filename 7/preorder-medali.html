@@ -31,23 +31,29 @@
                 name="formPesan"
                 onsubmit="return validateForm();">
 
+                <input type="text" id="useridCek" style="opacity: 0; width: 0; float: left;" required>
+                <div class="pt-4 d-none" id="alert-userid">
+                    <div class="alert alert-danger" role="alert">
+                        User ID tidak ditemukan!
+                    </div>
+                </div>
 
                 <!-- Field type: "short" id: "1378739420" -->
-                <input type="text" id="useridCek" style="opacity: 0; width: 0; float: left;" required>
-                <div class="input-group mb-3">
+                <div class="input-group">
                     <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="694406928" name="entry.694406928" placeholder="User ID" required>
+                        <input type="text" class="form-control" id="694406928" name="entry.694406928" onchange="cekUserId();" placeholder="User ID" required>
                         <label for="694406928">User ID</label>
                     </div>  
                 </div>
+                <p class="form-text mb-3">Lupa User ID? <a href="./pengumuman">Klik di Sini</a></p>
 
 
                 <!-- Field type: "short" id: "2129434190" -->
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="bi bi-app-indicator"></i></span>
                     <div class="form-floating">
-                        <input type="number" class="form-control" id="1652745537" name="entry.1652745537" placeholder="Jumlah" min="1" required>
+                        <input type="number" class="form-control" id="1652745537" name="entry.1652745537" placeholder="Jumlah" min="1" oninput="hitungHarga();" required>
                         <label for="1652745537">Jumlah</label>
                     </div>
                 </div>
@@ -122,16 +128,24 @@
 
                 <!-- Field type: "paragraph" id: "957683135" -->
                 <div class="input-group mb-3">
-                    <span class="input-group-text"><i class="bi bi-geo-alt-fill"></i></span>
-                    <div class="form-floating">
-                        <textarea class="form-control" id="1413955553" name="entry.1413955553" placeholder="Alamat Lengkap" rows="5" required></textarea>
-                        <label for="1413955553">Alamat Lengkap</label>
-                    </div>  
+                    <textarea class="form-control" id="1413955553" name="entry.1413955553" placeholder="Alamat Lengkap" rows="5" required></textarea>
                 </div>
+
+                Mohon sertakan data:
+                <ul>
+                    <li>Nama jalan, nomor rumah</li>
+                    <li>Petunjuk alamat</li>
+                    <li>RT/RW</li>
+                    <li>Kelurahan</li>
+                    <li>Kecamatan</li>
+                    <li>Kota/Kabupaten</li>
+                    <li>Provinsi</li>
+                    <li>Kode Pos</li>
+                </ul>
 
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="bi bi-pin-map"></i></span>
-                    <select onchange="validateAlamat();" id="Provinsi" name="Provinsi" class="form-select">
+                    <select onchange="hitungHarga();" id="Provinsi" name="Provinsi" class="form-select">
                         <option value="" selected hidden>Provinsi</option>
                         <option data-harga="60000" value="Aceh">Aceh</option>
                         <option data-harga="50000" value="Sumatera Utara">Sumatera Utara</option>
@@ -172,8 +186,9 @@
 
                 <br><hr><br>
 
-                Biaya Pendaftaran:
+                Biaya Pemesanan: (termasuk ongkir)
                 <h3>Rp<span id="biaya">??? (silahkan isi data di atas terlebih dahulu)</span></h3>
+                <input type="hidden" id="1749374995" name="entry.1749374995" class="form-control" placeholder="Biaya">
                 <div>
                     Metode Pembayaran:
                     <ul>
@@ -211,6 +226,7 @@
                     </div>
                 </div>
 
+
                 <fieldset>
                     <legend for="fileSelect">Bukti Pembayaran</legend>
                     <div class="upload_button_holder">
@@ -218,35 +234,36 @@
                         <a href="#" id="fileSelect" class="btn btn-success col-12 mb-2 p-2 rounded-pill"><i class="bi bi-upload"></i> Pilih Bukti Pembayaran</a>
                     </div>
                     <small>*) Silahkan tunggu bukti pembayaran untuk tampil di bawah ini. Jika gambar tidak muncul, silahkan periksa koneksi internet dan upload ulang.</small><br><br>
-                    <input type="text" id="298692959" name="entry.298692959" class="d-none" required>
+                    <input type="text" id="1238003528" name="entry.1238003528" class="d-none" required>
                     <div id="buktiPembayaranGambar"></div><br>
                 </fieldset><br>
 
-                <!-- Field type: "choices" id: "1525168852" -->
+
+                <!-- Field type: "choices" id: "258565562" -->
                 <fieldset>
-                    <legend for="1525168852">Tujuan Pembayaran</legend>
+                    <legend for="258565562">Tujuan Pembayaran</legend>
                     <div class="form-group">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="entry.1009010964" value="Kode QR" required>
+                                <input type="radio" name="entry.1047022147" value="Kode QR" required>
                                 Kode QR
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="entry.1009010964" value="Transfer: BCA" required>
+                                <input type="radio" name="entry.1047022147" value="Transfer: BCA" required>
                                 Transfer: BCA
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="entry.1009010964" value="Transfer: Mandiri" required>
+                                <input type="radio" name="entry.1047022147" value="Transfer: Mandiri" required>
                                 Transfer: Mandiri
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="entry.1009010964" value="Voucher" required>
+                                <input type="radio" name="entry.1047022147" value="Voucher" required>
                                 Voucher
                             </label>
                         </div>
@@ -266,7 +283,8 @@
                 <input type="hidden" name="pageHistory" value="0">
 
                 <!-- <script>document.getElementById('submit').value = "<i class='bi bi-send-check'></i> Kirim Data";</script> -->
-                <input class="btn btn-primary col-12 p-3 mt-5 rounded-pill" type="submit" value="&#10004; Kirim Data"><br>
+                <button type="button" id="btnLoading" class="btn btn-primary col-12 p-3 mt-5 rounded-pill disabled d-none"><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading</button>
+                <input  type="submit" id="btnKirim"   class="btn btn-primary col-12 p-3 mt-5 rounded-pill" value="&#10004; Kirim Data"><br>
                 <small>*) Mohon klik tombol Kirim Data <b>SEKALI SAJA</b> dan tunggu hingga muncul tulisan "Data Terkirim".</small>
             </form>
 
@@ -286,11 +304,13 @@
     </svg>
 </div> -->
 
+<script>const preorderJenis = 'medali';</script>
 <script src="assets/plugins/jquery/jquery-3.6.0.min.js"></script>
 <script src="assets/plugins/jquery/jquery.form.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/plugins/sweetalert2/dist/sweetalert2.all.min.js"></script>
-<script src="assets/rihandcreative/cloudinary.js"></script>
+<script src="assets/rihandcreative/cloudinary2.js"></script>
+<script src="assets/rihandcreative/preorderdata.js"></script>
 <script src="assets/rihandcreative/preorder.js"></script>
 
 </body>
