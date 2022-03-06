@@ -12,6 +12,9 @@ if(getParams.uid !== undefined) {
 
 // Cek User ID
 function cekUserId() {
+
+    // userListFunc();
+    // return userList;
 	var userID 	    = document.getElementById("694406928").value;
 	var fetchUser 	= userList.find(o => o.userid === userID);
 
