@@ -44,7 +44,9 @@ function uploadFile(file) {
             var imgSrc      = imgGambar.src;
             imgGambar.style.width = '30vw';
 
-            if(preorderJenis == 'medali') { document.getElementById("1238003528").value = imgSrc; }
+            // if(preorderJenis == 'medali') {
+                document.getElementById("1238003528").value = imgSrc;
+            // }
 
         }
     };
