@@ -88,6 +88,9 @@
                     </div>
                 </div>
             </div>
+            
+            <hr>
+            <button type="button" class="btn btn-secondary rounded-pill col-12 p-3" data-bs-toggle="modal" data-bs-target="#ongkir">Cek Ongkir</button>
 
         </div>
         <div class="card-footer text-center">
@@ -105,7 +108,69 @@
     </svg>
 </div> -->
 
+<script src="assets/plugins/jquery/jquery-3.6.0.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/plugins/datatables/datatables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.table-data').DataTable({
+            "language": {
+                "url": "assets/plugins/datatables/Indonesian.json"
+            }
+        });
+    });
+</script>
+
+<div class="modal fade" id="ongkir" tabindex="-1" aria-labelledby="ongkirLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ongkirLabel">Daftar Ongkir</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body table-responsive">
+                <table class="table table-striped table-data">
+                    <thead><tr class="tableizer-firstrow"><th>Provinsi</th><th>Ongkir</th></tr></thead><tbody>
+                     <tr><td>Aceh</td><td>70000</td></tr>
+                     <tr><td>Bali</td><td>25000</td></tr>
+                     <tr><td>Bangka Belitung</td><td>50000</td></tr>
+                     <tr><td>Banten</td><td>25000</td></tr>
+                     <tr><td>Bengkulu</td><td>60000</td></tr>
+                     <tr><td>Gorontalo</td><td>75000</td></tr>
+                     <tr><td>DKI Jakarta</td><td>25000</td></tr>
+                     <tr><td>Jambi</td><td>50000</td></tr>
+                     <tr><td>Jawa Barat</td><td>25000</td></tr>
+                     <tr><td>Jawa Tengah</td><td>25000</td></tr>
+                     <tr><td>Jawa Timur</td><td>25000</td></tr>
+                     <tr><td>Kalimantan Barat</td><td>60000</td></tr>
+                     <tr><td>Kalimantan Selatan</td><td>50000</td></tr>
+                     <tr><td>Kalimantan Tengah</td><td>55000</td></tr>
+                     <tr><td>Kalimantan Timur</td><td>60000</td></tr>
+                     <tr><td>Kalimantan Utara</td><td>70000</td></tr>
+                     <tr><td>Kepulauan Riau</td><td>65000</td></tr>
+                     <tr><td>Lampung</td><td>40000</td></tr>
+                     <tr><td>Maluku</td><td>120000</td></tr>
+                     <tr><td>Maluku Utara</td><td>80000</td></tr>
+                     <tr><td>Nusa Tenggara Barat</td><td>35000</td></tr>
+                     <tr><td>Nusa Tenggara Timur</td><td>90000</td></tr>
+                     <tr><td>Papua</td><td>130000</td></tr>
+                     <tr><td>Papua Barat</td><td>130000</td></tr>
+                     <tr><td>Riau</td><td>60000</td></tr>
+                     <tr><td>Sulawesi Barat</td><td>60000</td></tr>
+                     <tr><td>Sulawesi Selatan</td><td>60000</td></tr>
+                     <tr><td>Sulawesi Tengah</td><td>80000</td></tr>
+                     <tr><td>Sulawesi Tenggara</td><td>85000</td></tr>
+                     <tr><td>Sulawesi Utara</td><td>90000</td></tr>
+                     <tr><td>Sumatera Barat</td><td>55000</td></tr>
+                     <tr><td>Sumatera Selatan</td><td>50000</td></tr>
+                     <tr><td>Sumatera Utara</td><td>60000</td></tr>
+                     <tr><td>Yogyakarta</td><td>25000</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
