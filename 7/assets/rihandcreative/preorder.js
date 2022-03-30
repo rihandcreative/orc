@@ -56,9 +56,9 @@ function hitungHarga() {
     if( jumlah.value < 1 || jumlah.value === NaN || provHarga === null ) {
         var harga   = '??? (silahkan isi data di atas terlebih dahulu)';
     } else {
-        if(preorderJenis == 'medali') { var harga = (jumlah.value * 90000) + parseFloat(provHarga); }
-        if(preorderJenis == 'paket')  { var harga = (jumlah.value * 140000) + parseFloat(provHarga); }
-        if(preorderJenis == 'legal')  { var harga = (jumlah.value * 170000) + parseFloat(provHarga); }
+        if(preorderJenis == 'medali') { var harga = (jumlah.value * 95000) + parseFloat(provHarga); }
+        if(preorderJenis == 'paket')  { var harga = (jumlah.value * 145000) + parseFloat(provHarga); }
+        if(preorderJenis == 'legal')  { var harga = (jumlah.value * 175000) + parseFloat(provHarga); }
     }
     console.log(harga);
     biaya.innerHTML     = harga;
