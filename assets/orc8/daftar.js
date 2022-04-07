@@ -1,3 +1,9 @@
+Swal.fire({
+    icon: 'info',
+    title: 'Data Tidak Boleh Salah!',
+    text: 'Seluruh data akan digunakan sampai pembuatan piagam dan medali dengan ukiran nama. Data tidak bisa diganti setelah disubmit.',
+})
+
 function inputUpper(x) {
     x.value = x.value.toUpperCase();
 }
@@ -14,6 +20,8 @@ function createUserid() {
 
 // Submit Form
 $('#form').submit(function (event) {
+    document.getElementById('btnLoading').classList.remove('d-none');
+    document.getElementById('btnKirim').classList.add('d-none');
     event.preventDefault()
     var extraData = {}
     $('#form').ajaxSubmit({
@@ -34,7 +42,7 @@ $('#form').submit(function (event) {
                 if (result.isConfirmed) {
                     window.location = 'https://rihand.link/orc8-group'
                 } else {
-                    window.location = '.'
+                    window.location = './daftar'
                 }
             })
         }
@@ -43,6 +51,8 @@ $('#form').submit(function (event) {
 
 // Validate Alamat
 function validateAlamat() {
+
+    document.getElementById('103599388').value = document.getElementById('kota').value;
     
     var provinsi    = document.getElementById('Provinsi');
     var alamatFix   = document.getElementById('alamatInput').value  + ', Kelurahan ' + document.getElementById('kelurahan').value + ', Kecamatan ' + document.getElementById('kecamatan').value + ', ' + document.getElementById('kota').value + ', ' + provinsi.options[provinsi.selectedIndex].value + ' (' + document.getElementById('kodepos').value + ')';

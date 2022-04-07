@@ -14,7 +14,7 @@ SERTAKAN BUKTI KARTU PELAJAR
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olimpiade | ORC-VIII 2022</title>
+    <title>Daftar | ORC-VIII 2022</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/plugins/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/plugins/sweetalert2/dist/sweetalert2.min.css">
@@ -185,12 +185,32 @@ SERTAKAN BUKTI KARTU PELAJAR
                             </select>
                         </div>
 
+                        
+                        <!-- PILIHAN WAKTU PENGERJAAN -->
+                        <div class="input-group mb-4">
+                            <span class="input-group-text"><i class="bi bi-stopwatch"></i></span>
+                            <select id="462827781" name="entry.2031113957" class="form-select" required>
+                                <option value="" selected hidden disabled>WAKTU MULAI PENGERJAAN</option>
+                                <option value="" disabled></option>
+                                <option value="Sabtu, 21 Mei - 09.00">Sabtu, 21 Mei - 09.00</option>
+                                <option value="Sabtu, 21 Mei - 11.00">Sabtu, 21 Mei - 11.00</option>
+                                <option value="Sabtu, 21 Mei - 13.00">Sabtu, 21 Mei - 13.00</option>
+                                <option value="Sabtu, 21 Mei - 15.00">Sabtu, 21 Mei - 15.00</option>
+                                <option value="Sabtu, 21 Mei - 17.00">Sabtu, 21 Mei - 17.00</option>
+                                <option value="Sabtu, 21 Mei - 19.00">Sabtu, 21 Mei - 19.00</option>
+                                <option value="Minggu, 22 Mei - 09.00">Minggu, 22 Mei - 09.00</option>
+                                <option value="Minggu, 22 Mei - 11.00">Minggu, 22 Mei - 11.00</option>
+                                <option value="Minggu, 22 Mei - 13.00">Minggu, 22 Mei - 13.00</option>
+                                <option value="Minggu, 22 Mei - 15.00">Minggu, 22 Mei - 15.00</option>
+                            </select>
+                        </div>
 
                         <br><hr><br>
                         
                         <!-- ALAMAT -->
                         
-                        <input id="1494903587" type="hidden" name="entry.1494903587">
+                        <input id="1494903587" type="hidden" name="entry.1494903587">   <!-- ALAMAT LENGKAP -->
+                        <input id="103599388" type="hidden" name="entry.103599388">
                         <h4 class="mb-4">Rincian di bawah ini digunakan untuk pemesanan reward (medali dan piagam).</h4>
 
                         <div class="row">
@@ -269,7 +289,7 @@ SERTAKAN BUKTI KARTU PELAJAR
                         <div class="text-left">
 
                             Biaya Pendaftaran:
-                            <h3>Rp50.000<span style="font-size: small;"> / bidang</span></h3>
+                            <h3>Rp30.000<span style="font-size: small;"> / bidang</span></h3>
                             <div>
                                 Metode Pembayaran:
                                 <ul>
@@ -362,7 +382,8 @@ SERTAKAN BUKTI KARTU PELAJAR
                         -->
                         <input type="hidden" name="pageHistory" value="0">
     
-                        <input class="btn btn-brown col-12" type="submit" value="&#10004; Kirim Data"><br>
+                        <button type="button" id="btnLoading" class="btn btn-brown col-12 p-3 rounded-pill disabled d-none"><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading</button>
+                        <input  type="submit" id="btnKirim"   class="btn btn-brown col-12 p-3" value="&#10004; Kirim Data"><br>
                         <small>*) Mohon klik tombol Kirim Data <b>SEKALI SAJA</b> dan tunggu hingga muncul tulisan "Data Terkirim".</small>
 
                         </form>
@@ -380,15 +401,9 @@ SERTAKAN BUKTI KARTU PELAJAR
 <script src="../assets/plugins/jquery/jquery.form.min.js"></script>
 <script src="../assets/plugins/sweetalert2/dist/sweetalert2.all.min.js"></script>
 <script src="../assets/orc8/cloudinary.js"></script>
+<!-- <script src="../assets/orc8/cloudinary-kartu.js"></script> -->
 <script src="../assets/orc8/daftar.js"></script>
 
-<script>
-    Swal.fire({
-        icon: 'info',
-        title: 'Data Tidak Boleh Salah!',
-        text: 'Seluruh data akan digunakan sampai pembuatan piagam dan medali dengan ukiran nama. Data tidak bisa diganti setelah disubmit.',
-    })
-</script>
 
 </body>
 </html>
