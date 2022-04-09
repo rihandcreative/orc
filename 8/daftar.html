@@ -54,7 +54,7 @@ SERTAKAN BUKTI KARTU PELAJAR
                         method="POST">
     
                         <!-- BATCH -->      <input id="622500084" type="hidden" name="entry.622500084" class="form-control" value="I">
-                        <!-- USER ID -->    <input id="1221670114" type="hidden" name="entry.1221670114" class="form-control" >
+                        <!-- USER ID -->    <input id="1221670114" type="text" name="entry.1221670114" class="d-none">
 
     
                         <!-- NAMA LENGKAP -->
@@ -327,7 +327,7 @@ SERTAKAN BUKTI KARTU PELAJAR
 
                             <hr>
 
-                            <fieldset>
+                            <!-- <fieldset>
                                 <legend for="fileSelect">Bukti Pembayaran + Kartu Identitas (digabung jadi satu foto dan dilampirkan)</legend>
                                 <div class="form_controls">
                                     <div class="upload_button_holder">
@@ -337,6 +337,17 @@ SERTAKAN BUKTI KARTU PELAJAR
                                   </div>
                                 <small>*) Silahkan tunggu bukti pembayaran untuk tampil di bawah ini. Jika gambar tidak muncul, silahkan periksa koneksi internet dan upload ulang.</small><br><br>
                                 <input id="1730543772" type="hidden" name="entry.1730543772" class="form-control" required>
+                                <div id="buktiPembayaranGambar"></div><br>
+                            </fieldset><br> -->
+
+                            <fieldset>
+                                <legend for="fileSelect">Bukti Pembayaran + Kartu Identitas (digabung jadi satu foto dan dilampirkan)</legend>
+                                <div class="upload_button_holder">
+                                    <input type="file" id="fileElem" accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+                                    <a href="#" id="fileSelect" class="btn btn-success col-12 mb-2 p-2 rounded-pill"><i class="bi bi-upload"></i> Pilih Bukti Pembayaran</a>
+                                </div>
+                                <small>*) Silahkan tunggu gambar untuk tampil di bawah ini. Jika gambar tidak muncul, silahkan periksa koneksi internet dan upload ulang.</small><br><br>
+                                <input id="1730543772" type="text" name="entry.1730543772" class="d-none" required>
                                 <div id="buktiPembayaranGambar"></div><br>
                             </fieldset><br>
                             
