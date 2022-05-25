@@ -7,23 +7,23 @@ function inputLower(x) {
 }
 
 // Hitung Harga
-function hitungHarga() {
-    var biaya       = document.getElementById('biaya');
-    var biayaInput  = document.getElementById('427873150');
-    var jumlah      = document.getElementById('1176952798');
-    var provinsi    = document.getElementById('1455027347');
-    var provHarga   = provinsi.options[provinsi.selectedIndex].getAttribute('data-harga');
-    if( jumlah.value < 1 || jumlah.value === NaN || provHarga === null ) {
-        var harga   = '??? (silahkan isi data di atas terlebih dahulu)';
-    } else {
-        if(preorderJenis == 'hebat')    { var harga = (jumlah.value * 95000) + parseFloat(provHarga); }
-        if(preorderJenis == 'juara')    { var harga = (jumlah.value * 155000) + parseFloat(provHarga); }
-        if(preorderJenis == 'prestasi') { var harga = (jumlah.value * 175000) + parseFloat(provHarga); }
-    }
-    console.log(harga);
-    biaya.innerHTML     = harga;
-    biayaInput.value    = harga;
-}
+// function hitungHarga() {
+//     var biaya       = document.getElementById('biaya');
+//     var biayaInput  = document.getElementById('427873150');
+//     var jumlah      = document.getElementById('1176952798');
+//     var provinsi    = document.getElementById('1455027347');
+//     var provHarga   = provinsi.options[provinsi.selectedIndex].getAttribute('data-harga');
+//     if( jumlah.value < 1 || jumlah.value === NaN || provHarga === null ) {
+//         var harga   = '??? (silahkan isi data di atas terlebih dahulu)';
+//     } else {
+//         if(preorderJenis == 'hebat')    { var harga = (jumlah.value * 95000) + parseFloat(provHarga); }
+//         if(preorderJenis == 'juara')    { var harga = (jumlah.value * 155000) + parseFloat(provHarga); }
+//         if(preorderJenis == 'prestasi') { var harga = (jumlah.value * 175000) + parseFloat(provHarga); }
+//     }
+//     console.log(harga);
+//     biaya.innerHTML     = harga;
+//     biayaInput.value    = harga;
+// }
 
 // Get User ID From URL
 var getParams = {}

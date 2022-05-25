@@ -163,7 +163,9 @@
                             <div class="text-left">
 
                                 Biaya Pemesanan:
-                                <h3>Rp<span id="biaya">??? (silahkan isi data di atas terlebih dahulu)</span></h3>
+                                <!-- <h3>Rp<span id="biaya">??? (silahkan isi data di atas terlebih dahulu)</span></h3> -->
+                                <h3>Rp175000 (belum ongkir)</h3>
+                                <h3>Ongkir: <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cekOngkir">Klik di Sini</button></h3>
                                 <div>
                                     Metode Pembayaran:
                                     <ul>
@@ -288,5 +290,21 @@
 <script src="../assets/orc8/preorder.js"></script>
 <script>const preorderJenis = 'hebat'; const inputBukti = '1950820397';</script>
 
+<div class="modal fade" id="cekOngkir" tabindex="-1" aria-labelledby="cekOngkirLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cekOngkirLabel">Cek Ongkir</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Aceh 70000<br />Bali 25000<br />Bangka Belitung 50000<br />Banten 25000<br />Bengkulu 60000<br />Gorontalo 75000<br />DKI Jakarta 25000<br />Jambi 50000<br />Jawa Barat 25000<br />Jawa Tengah 25000<br />Jawa Timur 25000<br />Kalimantan Barat 60000<br />Kalimantan Selatan 50000<br />Kalimantan Tengah 55000<br />Kalimantan Timur 60000<br />Kalimantan Utara 70000<br />Kepulauan Riau 65000<br />Lampung 40000<br />Maluku 120000<br />Maluku Utara 80000<br />Nusa Tenggara Barat 35000<br />Nusa Tenggara Timur 90000<br />Papua 130000<br />Papua Barat 130000<br />Riau 60000<br />Sulawesi Barat 60000<br />Sulawesi Selatan 60000<br />Sulawesi Tengah 80000<br />Sulawesi Tenggara 85000<br />Sulawesi Utara 90000<br />Sumatera Barat 55000<br />Sumatera Selatan 50000<br />Sumatera Utara 60000<br />Yogyakarta 25000</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
