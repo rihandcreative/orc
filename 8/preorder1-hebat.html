@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preorder | ORC-VIII 2022</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/plugins/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="../assets/orc8/rihand.css">
+    <!-- <meta http-equiv="refresh" content="0; url=./daftarclose"> -->
+</head>
+<body>
+
+    <div class="position-relative">
+        <div class="position-absolute top-0 start-0">
+            <img src="../assets/rihand/logo-circle.png" alt="" width="15%" class="rounded-circle img-logo">
+        </div>
+        <div class="position-absolute top-0 start-100 translate-middle">
+            <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60vw" id="blobSvg">
+                <path id="blob" d="M395,286Q362,322,347.5,377Q333,432,279.5,423Q226,414,180.5,398.5Q135,383,119,338Q103,293,74,241.5Q45,190,66.5,126.5Q88,63,157,74.5Q226,86,282,71.5Q338,57,364.5,108Q391,159,409.5,204.5Q428,250,395,286Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+
+        <div class="text-center mb-5">
+            <h3 style="font-weight: inherit;">OLIMPIADE SAINS NASIONAL 2022</h3>
+            <h1>ORC-VIII</h1>
+        </div>
+        
+        <center>
+            <div class="card card-rihand col-md-8">
+                <div class="card-body card-rihand-body text-center">
+                    
+                    <h1>PEMESANAN REWARD</h1><h4>(PAKET HEBAT)</h4>
+                    <br><hr><br>
+
+                    <div class="col-10 offset-1">
+
+                        <form action="https://docs.google.com/forms/d/e/1FAIpQLSdqYVo6d_gIwi1v3L3FiyAouhJ9fmoqkMko9Eo12QLQa5g6nw/formResponse"
+                            target="_self"
+                            id="form"
+                            method="POST">
+
+                            <!-- USER ID -->
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-patch-question-fill"></i></span>
+                                <input id="97263414" type="text" name="entry.97263414" class="form-control" placeholder="USER ID" onkeyup="inputLower(this);" required>
+                            </div>
+                            <p class="form-text text-left mb-4">
+                                *) <strong>BUKAN NAMA!!</strong> Cek User ID: <a href="./cekpeserta">> Klik di Sini <</a><br>
+                                *) Isikan dengan <strong>HANYA SATU</strong> User ID. Jika ingin memesan reward untuk lebih dari 1 bidang, silahkan mengisi ulang form sesuai jumlah bidang yang diikuti.
+                            </p>
+
+
+                            <!-- NAMA LENGKAP -->
+                            <div class="input-group mb-4">
+                                <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                                <input id="1011707553" type="text" name="entry.1011707553" class="form-control" placeholder="NAMA LENGKAP" onkeyup="inputUpper(this);" required>
+                            </div>
+
+
+                            <!-- JUMLAH PESANAN -->
+                            <div class="input-group mb-4">
+                                <span class="input-group-text"><i class="bi bi-award-fill"></i></span>
+                                <input id="1176952798" type="number" min="1" name="entry.1176952798" class="form-control" placeholder="JUMLAH MEDALI YANG DIPESAN" required>
+                            </div>
+
+
+                            <!-- NOMOR WA -->
+                            <div class="input-group mb-4">
+                                <span class="input-group-text"><i class="bi bi-whatsapp"></i></span>
+                                <input id="148832101" type="number" name="entry.148832101" class="form-control" placeholder="NOMOR WHATSAPP AKTIF" required>
+                            </div>
+
+                            
+                            <br><hr><br>
+
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <h6>ALAMAT PENGIRIMAN</h6>
+                                    <textarea class="form-control" name="entry.1852328609" id="1852328609" cols="30" rows="5" placeholder="Nomor dan Nama Jalan, Petunjuk Alamat" required></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <h6>KELURAHAN</h6>
+                                    <input type="text" class="form-control" name="entry.1163170663" id="1163170663" required>
+                                </div>
+                                <div class="col-6 mb-4">
+                                    <h6>KECAMATAN</h6>
+                                    <input type="text" class="form-control" name="entry.572048604" id="572048604" required>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-6 mb-4">
+                                    <h6>KOTA/KABUPATEN</h6>
+                                    <input type="text" class="form-control" name="entry.1544633820" id="1544633820" required>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <h6>KODE POS</h6>
+                                    <input type="number" class="form-control" name="entry.1514518272" id="1514518272" required>
+                                </div>
+                            </div>
+    
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"><i class="bi bi-pin-map"></i></span>
+                                <select onchange="hitungHarga();" id="1455027347" name="entry.919301073" class="form-select" required>
+                                    <option value="" selected hidden>PROVINSI</option>
+                                    <option data-harga="60000" value="Aceh">Aceh</option>
+                                    <option data-harga="50000" value="Sumatera Utara">Sumatera Utara</option>
+                                    <option data-harga="45000" value="Sumatera Barat">Sumatera Barat</option>
+                                    <option data-harga="50000" value="Riau">Riau</option>
+                                    <option data-harga="50000" value="Jambi">Jambi</option>
+                                    <option data-harga="45000" value="Sumatera Selatan">Sumatera Selatan</option>
+                                    <option data-harga="55000" value="Bengkulu">Bengkulu</option>
+                                    <option data-harga="50000" value="Lampung">Lampung</option>
+                                    <option data-harga="50000" value="Bangka Belitung">Bangka Belitung</option>
+                                    <option data-harga="45000" value="Kepulauan Riau">Kepulauan Riau</option>
+                                    <option data-harga="25000" value="Jakarta">Jakarta</option>
+                                    <option data-harga="25000" value="Jawa Barat">Jawa Barat</option>
+                                    <option data-harga="25000" value="Banten">Banten</option>
+                                    <option data-harga="25000" value="Jawa Tengah">Jawa Tengah</option>
+                                    <option data-harga="25000" value="Yogyakarta">Yogyakarta</option>
+                                    <option data-harga="25000" value="Jawa Timur">Jawa Timur</option>
+                                    <option data-harga="45000" value="Kalimantan Barat">Kalimantan Barat</option>
+                                    <option data-harga="40000" value="Kalimantan Tengah">Kalimantan Tengah</option>
+                                    <option data-harga="40000" value="Kalimantan Selatan">Kalimantan Selatan</option>
+                                    <option data-harga="50000" value="Kalimantan Timur">Kalimantan Timur</option>
+                                    <option data-harga="75000" value="Kalimantan Utara">Kalimantan Utara</option>
+                                    <option data-harga="25000" value="Bali">Bali</option>
+                                    <option data-harga="75000" value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+                                    <option data-harga="30000" value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+                                    <option data-harga="75000" value="Sulawesi Utara">Sulawesi Utara</option>
+                                    <option data-harga="60000" value="Sulawesi Tengah">Sulawesi Tengah</option>
+                                    <option data-harga="50000" value="Sulawesi Selatan">Sulawesi Selatan</option>
+                                    <option data-harga="70000" value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+                                    <option data-harga="60000" value="Sulawesi Barat">Sulawesi Barat</option>
+                                    <option data-harga="75000" value="Gorontalo">Gorontalo</option>
+                                    <option data-harga="75000" value="Maluku">Maluku</option>
+                                    <option data-harga="75000" value="Maluku Utara">Maluku Utara</option>
+                                    <option data-harga="140000" value="Papua">Papua</option>
+                                    <option data-harga="140000" value="Papua Barat">Papua Barat</option>
+                                </select>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <h6>CATATAN</h6>
+                                    <textarea class="form-control" name="entry.1325125892" id="1325125892" cols="30" rows="5" placeholder="*) Tidak wajib"></textarea>
+                                </div>
+                            </div>
+
+
+                            <br><hr><br>
+
+
+                            <div class="text-left">
+
+                                Biaya Pemesanan:
+                                <h3>Rp<span id="biaya">??? (silahkan isi data di atas terlebih dahulu)</span></h3>
+                                <div>
+                                    Metode Pembayaran:
+                                    <ul>
+                                        <li>
+                                            <b>Bank Transfer</b>
+                                            <ul>
+                                                <li>Mandiri: 1440022220229</li>
+                                                <li>BCA: 0113100424</li>
+                                                <li>(a/n Rihand Kreatif Indonesia)</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <b>QR Code</b><br> (jika ingin membayar via e-wallet seperti GoPay, OVO, Dana, dll. atau e-banking)<br>
+                                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#qris">Lihat QR Code</button>
+                                        </li>
+                                    </ul>
+                                </div>
+    
+                                <div class="modal fade" id="qris" tabindex="-1" aria-labelledby="qrisLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="qrisLabel">QR CODE</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="../assets/rihand/qrcode.jpeg" width="100%" class="rounded">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <hr>
+    
+                                <!-- <fieldset>
+                                    <legend for="fileSelect">Bukti Pembayaran + Kartu Identitas (digabung jadi satu foto dan dilampirkan)</legend>
+                                    <div class="upload_button_holder">
+                                        <input type="file" id="fileElem" accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+                                        <a href="#" id="fileSelect" class="btn btn-success col-12 mb-2 p-2 rounded-pill"><i class="bi bi-upload"></i> Pilih Bukti Pembayaran</a>
+                                    </div>
+                                    <small>*) Silahkan tunggu gambar untuk tampil di bawah ini. Jika gambar tidak muncul, silahkan periksa koneksi internet dan upload ulang.</small><br><br>
+                                    <input id="1950820397" type="text" name="entry.1950820397" class="d-none" required>
+                                    <div id="buktiPembayaranGambar"></div><br>
+                                </fieldset><br> -->
+
+                                <fieldset class="mb-4">
+                                    <legend for="868091882">Bukti Pembayaran</legend>
+                                    <input type="text" id="1950820397" name="entry.1950820397" class="d-none" required> <!-- URL File Bukti Pembayaran -->
+                                    <input type="hidden" id="427873150" name="entry.427873150"> <!-- Total Biaya -->
+                                    <button type="button" id="btnBukti" class="btn btn-success col-12 col-lg-8 rounded-pill p-3"><i class="bi bi-upload"></i> Upload Bukti Pembayaran</button>
+                                    <div id="gambarBukti"></div>
+                                </fieldset>
+                
+                                
+                                <fieldset>
+                                    <legend for="138955135">Tujuan Pembayaran</legend>
+                                    <div class="form-group">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="entry.1316637947" value="Kode QR" required>
+                                                Kode QR
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="entry.1316637947" value="Transfer: BCA" required>
+                                                Transfer: BCA
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="entry.1316637947" value="Transfer: Mandiri" required>
+                                                Transfer: Mandiri
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="entry.1316637947" value="Voucher" required>
+                                                Voucher
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+    
+                            </div>
+                            
+                            <br><hr><br>
+
+
+                            <input type="hidden" name="fvv" value="1">
+                            <input type="hidden" name="fbzx" value="-4502176774781463671">
+                            <!--
+                                CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+                                This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+                                Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+                                We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+                            -->
+                            <input type="hidden" name="pageHistory" value="0,1,2">
+
+                            <button type="button" id="btnLoading" class="btn btn-brown col-12 p-3 rounded-pill disabled d-none"><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading</button>
+                            <input  type="submit" id="btnKirim"   class="btn btn-brown col-12 p-3" value="&#10004; Kirim Data"><br>
+                            <small>*) Mohon klik tombol Kirim Data <b>SEKALI SAJA</b> dan tunggu hingga muncul tulisan "Data Terkirim".</small>
+                            </form>
+                  
+                    </div>
+                    
+                </div>
+            </div>
+        </center>
+        
+    </div>
+
+<script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/plugins/jquery/jquery-3.6.0.min.js"></script>
+<script src="../assets/plugins/jquery/jquery.form.min.js"></script>
+<script src="../assets/plugins/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+<script src="../assets/orc8/cloudinary-preorder.js"></script>
+<script src="../assets/orc8/preorder.js"></script>
+<script>const preorderJenis = 'hebat'; const inputBukti = '1950820397';</script>
+
+</body>
+</html>
