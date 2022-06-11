@@ -33,7 +33,7 @@ $('#form').submit(function (event) {
                 denyButtonText: `Saya Sudah Bergabung`,
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location = 'https://rihand.link/orc9-group'
+                    window.location = 'https://rihand.link/orc9-groupwa'
                 } else {
                     window.location = './daftar.html'
                 }
