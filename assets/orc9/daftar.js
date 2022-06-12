@@ -71,6 +71,8 @@ jenjang.addEventListener('change', () => {
         bidangSMA[2].classList.add('d-none');
         bidangSMA[3].classList.add('d-none');
         bidangSMA[4].classList.add('d-none');
+        bidangSMA[5].classList.add('d-none');
+        bidangSMA[6].classList.add('d-none');
 
     } else if(jenjang.value === 'SMP') {
 
@@ -90,6 +92,8 @@ jenjang.addEventListener('change', () => {
         bidangSMA[2].classList.add('d-none');
         bidangSMA[3].classList.add('d-none');
         bidangSMA[4].classList.add('d-none');
+        bidangSMA[5].classList.add('d-none');
+        bidangSMA[6].classList.add('d-none');
 
     } else if(jenjang.value === 'SMA') {
 
@@ -109,6 +113,8 @@ jenjang.addEventListener('change', () => {
         bidangSMA[2].classList.remove('d-none');
         bidangSMA[3].classList.remove('d-none');
         bidangSMA[4].classList.remove('d-none');
+        bidangSMA[5].classList.remove('d-none');
+        bidangSMA[6].classList.remove('d-none');
 
     }
 
