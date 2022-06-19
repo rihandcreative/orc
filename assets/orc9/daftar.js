@@ -35,7 +35,7 @@ $('#form').submit(function (event) {
                 if (result.isConfirmed) {
                     window.location = 'https://rihand.link/orc9-groupwa'
                 } else {
-                    window.location = './daftar.html'
+                    window.location = './daftar'
                 }
             })
         }
