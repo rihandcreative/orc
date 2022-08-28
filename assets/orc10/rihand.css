@@ -1,0 +1,72 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    overflow-x: hidden;
+    background-color: #f7e7eb;
+    max-width: 100%;
+    position: relative;
+    color: #000000;
+    font-family: 'Playfair Display', serif;
+    font-size: larger;
+}
+
+h1,h2,h3,h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    color: #01032c;
+    text-shadow: 2px 2px #ffffff;
+}
+
+.btn-accent {
+    color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 35px;
+    border-color: #c48725;
+    background-color: #c48725;
+    transition: all .2s ease-in-out;
+}
+
+.btn-accent:hover {
+    color: #ffffff;
+    border-radius: 35px;
+    border-color: #c48725;
+    background-color: #c48725;
+    transform: scale(1.1);
+}
+
+ol.ol-margin > li {
+    margin-bottom: 10px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.img-logo {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.container {
+	padding-top: 10vh;
+}
+
+.card-rihand {
+	border-radius: 15px;
+}
+
+.card-rihand-body {
+	background-color: #ffffff;
+	border-radius: 15px;
+	text-align: left;
+    color: #000000;
+}
+
+.modal {
+    text-align: left;
+    color: #000000;
+}
