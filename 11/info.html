@@ -256,12 +256,18 @@
     <script src="../assets/plugins/sweetalert2/dist/sweetalert2.all.min.js"></script>
     
     <script>
-        // Swal.fire({
-        //     icon: 'warning',
-        //     width: 700,
-        //     title: 'Aturan Kompetisi',
-        //     html: '<div class="text-left"><ol class="ol-margin"><li>Wajib membaca dengan cermat setiap pengumuman.</li><li>Peserta, Orang Tua, Guru sepakat untuk membangun komunikasi yang sehat, positif, dan ramah bersama dengan seluruh komponen panitia penyelenggara. Kata-kata kasar, ujaran kebencian, ancaman, maupun protes yang bersifat tuduhan tanpa dasar tidak dibenarkan. Bagi yang melanggar maka dewan juri berhak melakukan diskualifikasi. Peserta yang melanggar wajib menyampaikan permohonan maaf secara terbuka karena mencederai tujuan utama kompetisi ini yaitu membangun ekosistem yang positif dalam proses belajar siswa.</li><li>Kompetisi ini bersifat pembelajaran secara holistik mencakup aspek kognitif, afektif, dan etika moral yang dilakukan bersama antara pihak peserta dan penyelenggara.</li><li>Kompetisi ini BUKAN jaminan untuk peserta dapat otomatis meraih beasiswa atau otomatis diterima di jenjang pendidikan favorit yang diinginkan. Namun pengalaman dalam kompetisi ini dapat melatih siswa untuk memiliki pembaruan konsep belajar yang menyenangkan. Sekaligus, menjadi salah satu catatan sejarah bagi siswa bahwa pernah bertanding di kompetisi sains skala nasional. Sertifikat kompetisi ini dapat menjadi salah satu lampiran prestasi yang melengkapi prestasi lainnya yang diraih oleh siswa.</li><li>Keputusan dewan juri bersifat mutlak dan tidak dapat diganggu gugat.</li><li>Setiap pertanyaan, masukan, saran, dapat disampaikan dengan komunikasi yang sopan dan ramah sebagai ciri utama bangsa Indonesia. Sekaligus, upaya bersama untuk membentuk atmosfer keseharian yang sarat dengan nilai pendidikan bagi generasi muda.</li><li>Membaca ketentuan ini dan memahaminya berarti siap mengerjakannya di sepanjang rangkaian kompetisi.</li></ol></div>',
-        // })
+        Swal.fire({
+            icon: 'warning',
+            width: 700,
+            html: '<h2>Baca Aturan & Ketentuan Kompetisi</h2>',
+            showDenyButton: true,
+            confirmButtonText: 'Baca di Sini',
+            denyButtonText: 'Sudah Membaca',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.open('https://orc.rihandcreative.com/ketentuan?orc=11');
+            }
+        })
     </script>
 
 </body>
