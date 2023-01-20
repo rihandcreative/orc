@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olimpiade | ORC-XI 2023</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/rihand/default.css">
+</head>
+<body>
+
+    <div class="position-relative">
+        <div class="position-absolute top-0 start-0">
+            <img src="../assets/rihand/logo-circle.png" alt="" width="15%" class="rounded-circle img-logo">
+        </div>
+        <div class="position-absolute top-0 start-100 translate-middle">
+            <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60vw" id="blobSvg">
+                <path id="blob" d="M395,286Q362,322,347.5,377Q333,432,279.5,423Q226,414,180.5,398.5Q135,383,119,338Q103,293,74,241.5Q45,190,66.5,126.5Q88,63,157,74.5Q226,86,282,71.5Q338,57,364.5,108Q391,159,409.5,204.5Q428,250,395,286Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <!-- <h3 class="h-invert" style="font-weight: inherit;">OLIMPIADE RIHAND CREATIVE</h3> -->
+            <h1 class="h-invert">OLIMPIADE RIHAND CREATIVE</h1>
+        </div>
+        
+        <center>
+            <div class="card card-rihand col-md-8">
+                <div class="card-body card-rihand-body">
+                    
+                    <h1 class="text-center">KETENTUAN & QnA</h1>
+                    <div id="alert" class="alert alert-primary d-none" role="alert">
+                        Sudah membaca? <a id="juknis" href="https://orc.rihandcreative.com/">Kembali ke Juknis</a>
+                    </div>
+                    <hr>
+
+                    <h4>Prosedur Pendaftaran ORC</h4>
+                    <ol>
+                        <li>Menyiapkan kartu pelajar / akta kelahiran / kartu keluarga peserta.</li>
+                        <li>Mengakses <a href="https://shop.rihandcreative.com/shop/olimpiade/" target="_blank" rel="noopener noreferrer">Link Pendaftaran</a>.</li>
+                        <li>Isi setiap form pendaftaran dengan sangat hati-hati dan <b>TIDAK BOLEH SALAH</b>, karena data yang diinput tidak dapat diedit jika sudah submit.</li>
+                        <li>Selesaikan proses pendaftaran seperti proses belanja online:
+                            <ul>
+                                <li>Akses <a href="https://shop.rihandcreative.com/shop/olimpiade/" target="_blank" rel="noopener noreferrer">Link Pendaftaran</a></li>
+                                <li>Pilih Bidang lalu klik Pesan</li>
+                                <li>(Jika lebih dari satu bidang) Klik kembali ke Toko lalu ulangi langkah mengisi bidang</li>
+                                <li>Cek keranjang (kanan atas)</li>
+                                <li>Lakukan pengisian data peserta</li>
+                                <li>1x checkout pendaftaran hanya berlaku untuk satu peserta</li>
+                                <li>Pilih metode pembayaran</li>
+                                <li>Ikuti proses pembayaran</li>
+                                <li>Masuk group WA dan ikuti update info melalui group WA, link ORC, dan sosial media ORC</li>
+                                <li>Invoice terdapat di email yang dicantumkan</li>
+                            </ul>
+                        </li>
+                        <li>Gunakan cara komunikasi yang positif antar peserta maupun dengan panitia.</li>
+                    </ol>
+                    <hr>
+
+                    <h4>Mengapa data yang salah tidak dapat diedit?</h4>
+                    <ol>
+                        <li>Data yang diinput oleh peserta saat pendaftaran akan langsung terkunci di sistem pusat. Data ini yang akan dipakai sebagai acuan identitas seluruh peserta.</li>
+                        <li>Penguncian data dilakukan agar seluruh data olimpiade (mulai dari data pendaftaran hingga hasil skor) tetap aman dan tidak bisa dimanipulasi.</li>
+                        <li>Sistem pengamanan data ORC semakin diperketat sehingga tidak lagi ada kemungkinan untuk mengajukan perubahan data dengan membuka akses data pusat (letak data peserta disimpan).</li>
+                        <li>Panitia dan Customer Service tidak dapat mengakses perubahan data peserta.</li>
+                        <li>Jika ingin memperbaiki data yang salah, maka daftar kembali dari awal.</li>
+                    </ol>
+                    <hr>
+
+                    <h4>Mengapa pendaftaran ORC membutuhkan upload identitas peserta?</h4>
+                    <ol>
+                        <li>Sebagai validasi data peserta, apakah pendaftar benar-benar sesuai dengan identitas yang dicantumkan.</li>
+                        <li>Sebagai bukti sah kepesertaan ORC.</li>
+                        <li>Sebagai dokumen penting untuk menyesuaikan antara dokumen dengan foto dan video peserta pada saat pelaksanaan ORC.</li>
+                    </ol>
+                    <hr>
+
+                    <h4>Saya sudah sering ikut ORC, tapi saat mendaftar kenapa terus diminta upload identitas peserta?</h4>
+                    <ol>
+                        <li>ORC sangat menjaga keamanan data peserta. Salah satu upaya yang dilakukan adalah dengan memusnahkan seluruh identitas peserta dari bank data, setelah masa pengiriman paket reward di tiap periode ORC.</li>
+                        <li>Itu sebabnya, ORC tidak menyelenggarakan sistem member, agar data peserta tidak perlu disimpan yang berpotensi kemungkinan kebocoran data dan berdampak pada penyalahgunaan oleh pihak yang tidak bertanggung jawab.</li>
+                    </ol>
+                    
+                </div>
+            </div>
+        </center>
+        
+    </div>
+
+<script>
+    urlString       = window.location.href;
+    let paramString = urlString.split('?')[1];
+    let queryString = new URLSearchParams(paramString);
+
+    for (let pair of queryString.entries()) {
+        if(pair[0] = 'ORC') {
+            document.getElementById('alert').classList.remove('d-none');
+            document.getElementById('juknis').href += pair[1] + '/info';
+        }
+    }   
+</script>
+    
+</body>
+</html>
