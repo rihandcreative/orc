@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+body {
+    overflow-x: hidden;
+    background-color: #d6e9f1;
+    max-width: 100%;
+    position: relative;
+    color: #3f4c69;
+    font-family: 'Fredoka', serif;
+    font-size: larger;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Fredoka', sans-serif;
+    color: #3f4c69;
+    font-weight: bold;
+}
+
+.btn-accent {
+    color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 35px;
+    border-color: #683f69;
+    background-color: #683f69;
+    transition: all .2s ease-in-out;
+}
+
+.btn-accent:hover {
+    color: #ffffff;
+    border-radius: 35px;
+    border-color: #683f69;
+    background-color: #683f69;
+    transform: scale(1.1);
+}
+
+ol.ol-margin > li {
+    margin-bottom: 10px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.img-logo {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.container {
+	padding-top: 10vh;
+}
+
+.card-rihand {
+	border-radius: 15px;
+}
+
+.card-rihand-body {
+	background-color: #ffffff;
+	border-radius: 15px;
+	text-align: left;
+    color: #3f4c69;
+}
+
+.modal {
+    text-align: left;
+    color: #3f4c69;
+}
+
+* {
+    color: #3f4c69;
+}
