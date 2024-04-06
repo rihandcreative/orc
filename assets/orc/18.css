@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+    background: #8e43c2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: larger;
+    color: #1e354b;
+}
+
+h1,h2,h3,h4,h5,h6,button {
+    font-family: 'Press Start 2P', monospace;
+}
+
+.container {
+	padding-top: 5vh;
+}
+
+.title {
+    text-align: center;
+    color: #fff;
+    text-shadow: 4px 4px #1e354b;
+}
+
+.card {
+    border-radius: 25px;
+    background-color: #fff;
+}
+
+.btn-accent, .btn-accent:focus {
+    font-family: 'Press Start 2P', monospace;
+    font-weight: bolder;
+    text-decoration: none;
+    color: #000;
+    background-color: #c0c0c0;
+    box-shadow: 0 9px #666;
+    border: none;
+}
+
+.btn-accent:hover {
+    background-color: #a0a0a0;
+    color: #000;
+}
+
+.btn-accent:active {
+    background-color: #a0a0a0;
+    box-shadow: 0 5px #383838;
+    transform: translateY(4px);
+}
+
+.text-left {
+    text-align: left;
+}
