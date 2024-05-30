@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=DynaPuff:wght@400..700&display=swap');
+
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+    background: #fff8e1;
+    font-family: 'Dynapuff', sans-serif;
+    font-size: larger;
+    color: #2b4561;
+}
+
+h1,h2,h3,h4,h5,h6,button {
+    font-family: 'Dynapuff', sans-serif;
+}
+
+.h-title {
+    font-family: 'Cherry Bomb One', sans-serif;
+}
+
+.container {
+	padding-top: 5vh;
+}
+
+.title {
+    text-align: center;
+    color: #f6d6d6;
+    /* text-shadow: 4px 4px #7b5b5b; */
+    -webkit-text-stroke: 3px #7b5b5b;
+}
+
+.card {
+    border-radius: 25px;
+    background-color: #fff;
+}
+
+.btn-accent {
+    background-color: #ada2ff;
+}
+
+.btn-accent:hover {
+    background-color: #ad8ece;
+}
