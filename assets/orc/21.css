@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+    background: #f4e3e7;
+    font-family: 'Montserrat', sans-serif;
+    font-size: larger;
+    font-weight: 600;
+    color: #53282e;
+}
+
+/* h1,h2,h3,h4,h5,h6,button,a { */
+h1,h2,h3,button {
+    font-family: 'Charm', sans-serif;
+    font-weight: 700 !important;
+}
+
+.h-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.container {
+	padding-top: 5vh;
+}
+
+.title {
+    text-align: center;
+    color: #f5c3cb;
+    text-shadow: 4px 3px #ac6469;
+    /* -webkit-text-stroke: 3px #2f4659; */
+}
+
+.card {
+    border-radius: 25px;
+    background-color: #fff;
+}
+
+.btn-accent {
+    background-color: #f7c0cc;
+}
+
+.btn-accent:hover {
+    background-color: #dca4b0;
+}
+
+.text-left {
+    text-align: left !important;
+}
