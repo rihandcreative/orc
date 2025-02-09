@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');body {
+    overflow-x: hidden;
+    max-width: 100%;
+    background: #f9f4e6;
+    font-family: 'Montserrat', sans-serif;
+    font-size: larger;
+    font-weight: 600;
+    color: #0b0a0c;
+}
+
+h1,h2,h3,h4,h5,h6,button,a {
+    font-family: 'Inknut Antiqua', serif;
+    font-weight: 700 !important;
+}
+
+.h-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.container {
+	padding-top: 5vh;
+}
+
+.title {
+    text-align: center;
+    color: #885225;
+    /* text-shadow: 2px 2px #885225; */
+    /* -webkit-text-stroke: 1px #885225; */
+}
+
+.card {
+    border-radius: 25px;
+    background-color: #fff;
+}
+
+.btn-accent {
+    background-color: #ecd489;
+}
+
+.btn-accent:hover {
+    background-color: #dcc376;
+}
+
+.text-left {
+    text-align: left !important;
+}
