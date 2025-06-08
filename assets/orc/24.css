@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');body {
+@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body {
     overflow-x: hidden;
     max-width: 100%;
     background: #fcf1fe;
@@ -9,12 +10,12 @@
 }
 
 h1,h2,h3,h4,h5,h6,button,a {
-    font-family: 'Inknut Antiqua', serif;
+    font-family: 'Almendra', serif;
     font-weight: 700 !important;
 }
 
 .h-title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Almendra', sans-serif;
     font-weight: 900;
 }
 
@@ -40,6 +41,7 @@ h1,h2,h3,h4,h5,h6,button,a {
 
 .btn-accent:hover {
     background-color: #c9b4ea;
+    transform: scale(1.1);
 }
 
 .text-left {
