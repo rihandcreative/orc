@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+    background: #24335c;
+    font-family: 'Montserrat', sans-serif;
+    font-size: larger;
+    font-weight: 600;
+    color: #162439;
+}
+
+h1,h2,h3,h4,h5,h6,button,a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700 !important;
+}
+
+.h-title {
+    font-family: 'Bungee Shade', sans-serif;
+    font-weight: 900;
+}
+
+.container {
+	padding-top: 5vh;
+}
+
+.title {
+    text-align: center;
+    color: #ede1c1;
+    /* text-shadow: 2px 2px #885225; */
+    /* -webkit-text-stroke: 1px #885225; */
+}
+
+.card {
+    border-radius: 25px;
+    background-color: #fff;
+}
+
+.btn-accent {
+    background-color: #abd1f0;
+}
+
+.btn-accent:hover {
+    background-color: #81a7c6;
+    transform: scale(1.1);
+}
+
+.text-left {
+    text-align: left !important;
+}
