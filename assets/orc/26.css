@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Asimovian&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+    background: #f9d9e1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: larger;
+    font-weight: 600;
+    color: #431e22;
+}
+
+h1,h2,h3,h4,h5,h6,button,a {
+    font-family: 'Asimovian', serif;
+    font-weight: 700 !important;
+}
+
+.h-title {
+    font-family: 'Asimovian', sans-serif;
+    font-weight: 900;
+}
+
+.container {
+	padding-top: 5vh;
+}
+
+.title {
+    text-align: center;
+    color: #9f5159;
+    /* text-shadow: 2px 2px #885225; */
+    /* -webkit-text-stroke: 1px #885225; */
+}
+
+.card {
+    border-radius: 25px;
+    background-color: #fef8fa;
+}
+
+.btn-accent {
+    background-color: #e8bdba;
+    color: #5b3639;
+}
+
+.btn-accent:hover {
+    background-color: #c66363;
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.text-left {
+    text-align: left !important;
+}
