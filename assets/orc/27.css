@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+    background: #e4ebd1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: larger;
+    font-weight: 600;
+    color: #431e22;
+}
+
+h1,h2,h3,h4,h5,h6,button,a {
+    font-family: 'Eagle Lake', serif;
+    font-weight: 700 !important;
+}
+
+.h-title {
+    font-family: 'Eagle Lake', sans-serif;
+    font-weight: 900;
+}
+
+.container {
+	padding-top: 5vh;
+}
+
+.title {
+    text-align: center;
+    color: #526f1e;
+    /* text-shadow: 2px 2px #885225; */
+    /* -webkit-text-stroke: 1px #885225; */
+}
+
+.card {
+    border-radius: 25px;
+    background-color: #fef8fa;
+}
+
+.btn-accent {
+    background-color: #d8a676;
+    color: #000;
+}
+
+.btn-accent:hover {
+    background-color: #ad7842;
+    transform: scale(1.1);
+    color: #000;
+}
+
+.text-left {
+    text-align: left !important;
+}
