@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+    background: #ebf3fe;
+    font-family: 'Montserrat', sans-serif;
+    font-size: larger;
+    font-weight: 600;
+    color: #100d0c;
+}
+
+h1,h2,h3,h4,h5,h6,button,a {
+    font-family: 'Finger Paint', sans-serif;
+    font-weight: 700 !important;
+}
+
+.accordion-button {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.h-title {
+    font-family: 'Finger Paint', sans-serif;
+    font-weight: 900;
+}
+
+.container {
+	padding-top: 5vh;
+}
+
+.title {
+    text-align: center;
+    color: #100d0c;
+    /* text-shadow: 2px 2px #885225; */
+    /* -webkit-text-stroke: 1px #885225; */
+}
+
+.card {
+    border-radius: 25px;
+    background-color: #fef8fa;
+}
+
+.btn-accent {
+    background-color: #ee9178;
+    color: #000;
+}
+
+.btn-accent:hover {
+    background-color: #d5765b;
+    transform: scale(1.1);
+    color: #000;
+}
+
+.text-left {
+    text-align: left !important;
+}
